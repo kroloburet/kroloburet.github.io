@@ -20,12 +20,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
   <script src="https://rawgit.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/js.js" defer></script>
   <style>
-   .header{padding:7%;background:#f7f7f7;color:#634D35;font-size:110%;}
+   nav{margin:0;}
+   .menu{max-width:1000px;}
+   .header{padding:7%;background:#f5f5f5;color:#634D35;font-size:110%;overflow:hidden;}
    .header h1{padding-bottom:.5em;}
    .i{box-shadow: 0 0 0 18em #fff;border-radius:50%;transition:all .2s ease-in-out 0s;}
    .i:hover{box-shadow: 0 0 0 2px #E7D977;}
    .advant{text-align:center;max-width:1000px;margin:2em auto;padding:0 1%;}
-   .advant span{font-size:7em;display:block;color:#8a2be2;}
+   .advant span{padding-bottom:.2em;font-size:7em;display:block;color:#daa520;}
   </style>
 
  </head>
@@ -38,12 +40,25 @@
   <!--####### Презагрузка страницы / loader #######-->
   <div id="preload_lay"><div id="preload"></div></div>
   
+  <!--####### Меню #######-->
+  <span class="mobile_menu">&#8801;</span>
+  <nav>
+   <ul class="menu">
+    <li><a href="https://kroloburet.github.io/">Главная</a></li>
+    <li><span>Команда</span>
+     <ul class="sub_menu">
+      <li><a href="#">Копирайтер</a></li>
+     </ul>
+    </li>
+   </ul>
+  </nav>
+
   <!--####### Хедер #######-->
   <div class="row header">
    <img class="col3 i" src="img/i.jpg" alt="Это я..)">
    <div class="col9">
     <h1>Привет, Мир!</h1>
-    <p>Меня зовут Сергей Нижник, я - веб-разработчик. Мой опыт в веб-разработке и дизайна стартовал в 2008 году и продолжается по сей день. Несколько лет трудился арт-директором в одной из компаний, а сейчас работаю удаленно. В 2014 году разработал систему управления контентом <a href="#" target="_blank">Tagra CMS</a> которую использую как движок для высокопроизводительных, адаптивных и простых в администрировании сайтов моим клиентам.</p>
+    <p>Меня зовут Сергей Нижник, я - веб-разработчик. Мой опыт в веб-разработке и дизайна стартовал в 2008 году и продолжается по сей день. Несколько лет трудился арт-директором в одной из компаний, а сейчас работаю удаленно. В 2014 году разработал систему управления контентом <a href="https://github.com/kroloburet/TAGRA_CMS" target="_blank">Tagra CMS</a> которую использую как движок для высокопроизводительных, адаптивных и простых в администрировании сайтов моим клиентам.</p>
     <p>Все, что нужно для моей работы у меня есть: Интернет, мой ноутбук под Linux и желание разрабатывать успешные, современные веб-проекты. А еще, я считаю, что любой проект может стать уникальным. Итак, с удовольствием украшу веб Вашим проектом..) <a href="mailto:kroloburet@gmail.com">kroloburet@gmail.com</a></p>
    </div>
   </div>
