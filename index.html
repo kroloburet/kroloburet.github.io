@@ -6,18 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all">
-  <link href="https://raw.githubusercontent.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/css.css" rel="stylesheet">
-  <link href="https://raw.githubusercontent.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/fonts/FontAwesome/style.css" rel="stylesheet">
-  <!--[if lt IE 8]>
-  <link href="https://raw.githubusercontent.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/fonts/FontAwesome/ie7/ie7.css" rel="stylesheet">
-  <![endif]-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
-  <script src="https://raw.githubusercontent.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/js.js" defer></script>
   
   <title>Привет, Мир! | kroloburet</title>
   
-<!--####### Презагрузка страницы #######-->
-<style>#preload_lay{display:block;position:fixed;z-index:99999;top:0;left:0;width:100%;height:100%;background:#fff}#preload{box-sizing:border-box;margin:-50px;position:absolute;top:50%;left:50%;border:7px solid rgba(180,180,180,0.2);border-left-color:#E7D977;-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);-webkit-animation:load 1.1s infinite linear;animation:load 1.1s infinite linear}#preload,#preload:after{border-radius:50%;width:100px;height:100px}@-webkit-keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style><script>window.onload=function(){document.getElementById("preload_lay").style.display="none";};</script>
+  <!--####### Презагрузка страницы #######-->
+  <style>#preload_lay{display:block;position:fixed;z-index:99999;top:0;left:0;width:100%;height:100%;background:#fff}#preload{box-sizing:border-box;margin:-50px;position:absolute;top:50%;left:50%;border:7px solid rgba(180,180,180,0.2);border-left-color:#E7D977;-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);-webkit-animation:load 1.1s infinite linear;animation:load 1.1s infinite linear}#preload,#preload:after{border-radius:50%;width:100px;height:100px}@-webkit-keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style><script>window.onload=function(){document.getElementById("preload_lay").style.display="none";};</script>
+
+  <link href="https://rawgit.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/css.css" rel="stylesheet">
+  <link href="https://rawgit.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/fonts/FontAwesome/style.css" rel="stylesheet">
+  <!--[if lt IE 8]>
+  <link href="https://rawgit.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/fonts/FontAwesome/ie7/ie7.css" rel="stylesheet">
+  <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+  <script src="https://rawgit.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/js.js" defer></script>
+  <style>
+   .header{padding:7%;background:#f7f7f7;color:#634D35;font-size:110%;}
+   .header h1{padding-bottom:.5em;}
+   .i{box-shadow: 0 0 0 18em #fff;border-radius:50%;transition:all .2s ease-in-out 0s;}
+   .i:hover{box-shadow: 0 0 0 2px #E7D977;}
+   .advant{text-align:center;max-width:1000px;margin:2em auto;padding:0 1%;}
+   .advant span{font-size:7em;display:block;color:#8a2be2;}
+  </style>
 
  </head>
  <body>
@@ -29,8 +38,31 @@
   <!--####### Презагрузка страницы / loader #######-->
   <div id="preload_lay"><div id="preload"></div></div>
   
+  <!--####### Хедер #######-->
+  <div class="row header">
+   <img class="col3 i" src="img/i.jpg" alt="Это я..)">
+   <div class="col9">
+    <h1>Привет, Мир!</h1>
+    <p>Меня зовут Сергей Нижник, я - веб-разработчик. Мой опыт в веб-разработке и дизайна стартовал в 2008 году и продолжается по сей день. Несколько лет трудился арт-директором в одной из компаний, а сейчас работаю удаленно. В 2014 году разработал систему управления контентом <a href="#" target="_blank">Tagra CMS</a> которую использую как движок для высокопроизводительных, адаптивных и простых в администрировании сайтов моим клиентам.</p>
+    <p>Все, что нужно для моей работы у меня есть: Интернет, мой ноутбук под Linux и желание разрабатывать успешные, современные веб-проекты. А еще, я считаю, что любой проект может стать уникальным. Итак, с удовольствием украшу веб Вашим проектом..) <a href="mailto:kroloburet@gmail.com">kroloburet@gmail.com</a></p>
+   </div>
+  </div>
+  
   <!--####### Контент #######-->
-  <h1>Привет, Мир!</h1>
+  <div class="row advant">
+   <div class="col4">
+    <span class="fa-puzzle-piece"></span>
+    Работа в команде с профессиональним копирайтером, адаптивная верстка.
+   </div>
+   <div class="col4">
+    <span class="fa-star-o"></span>
+    Авторские иллюстрации, макеты, уникальный дизайн.
+   </div>
+   <div class="col4">
+    <span class="fa-rocket"></span>
+    Высокая производительность сайтов разработанных специально под Ваши задачи.
+   </div>
+  </div>
   
   <!--####### Футер #######-->
   
