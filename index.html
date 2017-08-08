@@ -17,8 +17,6 @@
   <!--[if lt IE 8]>
   <link href="https://rawgit.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/fonts/FontAwesome/ie7/ie7.css" rel="stylesheet">
   <![endif]-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
-  <script src="https://rawgit.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/js.js" defer></script>
   <style>
    nav{margin:0;}
    .menu{max-width:1000px;}
@@ -26,12 +24,23 @@
    .headline h1{margin-right:2%;}
    .header{padding:7%;background:#f5f5f5;color:#634D35;font-size:110%;overflow:hidden;}
    .header h1{padding-bottom:.5em;}
-   .i{box-shadow: 0 0 0 18em #fff;border-radius:50%;transition:all .2s ease-in-out 0s;}
+   .i{box-shadow:0 0 0 18em #fff;border-radius:50%;transition:all .2s ease-in-out 0s;}
    .i:hover{box-shadow: 0 0 0 2px #E7D977;}
+   @media(max-width:600px){.i{max-width:200px;}.header{padding:2em 1% 0 1%;}}
    .advant{text-align:center;max-width:1000px;margin:2em auto;padding:0 1%;}
    .advant span{padding-bottom:.2em;font-size:7em;display:block;color:#daa520;}
+   .projs{margin-bottom:2em;padding:0 1%;}
+   .projs h2{font-size:2.2em;margin:0;padding:0 0 1em 0;text-align:center;}
+   /*-------slider*/
+   .slider{position:relative;overflow:hidden;}
+   .slider_item{display:none;height:100%;max-width:1000px;margin:0 auto;}
+   .proj_title{font-size:1.7em;display:inline-block;margin-bottom:.3em;}
+   .proj_desc{padding:0;margin:0 0 .5em 0;list-style:none;}
+   .slider_prev,.slider_next{position:absolute;top:50%;font-size:8em;color:#437ee0;z-index:100;margin-top:-0.5em;cursor:pointer;opacity:0.8;text-shadow: 1px 1px 0 #fff;}
+   .slider_prev{left:1%;}
+   .slider_next{right:1%;}
+   .slider_prev:hover,.slider_next:hover{opacity:1;}
   </style>
-
  </head>
  <body>
 
@@ -69,7 +78,7 @@
    </div>
   </div>
   
-  <!--####### Контент #######-->
+  <!--####### Преимущества #######-->
   <div class="row advant">
    <div class="col4">
     <span class="fa-puzzle-piece"></span>
@@ -85,8 +94,154 @@
    </div>
   </div>
   
+  <!--####### Работы #######-->
+  <div class="projs">
+   <h2>Выполненные проекты</h2>
+   <div class="slider row">
+    <span class="slider_prev fa-angle-left"></span>
+    <span class="slider_next fa-angle-right"></span>
+    <!-- слайд №1 -->
+    <div class="slider_item">
+     <a href="http://www.dias-co.com" class="proj_title" target="_blank">dias-co.com</a>
+     <ul class="proj_desc">
+      <li><b>Выполнен:</b> 2015 год</li>
+      <li><b>Описание:</b> Адаптивный ресурс для крупной консалтинговой компании.</li>
+     </ul>
+     <img src="img/proj_screens/dias-co.com.png" alt="dias-co.com">
+    </div>
+    <!-- слайд №2 -->
+    <div class="slider_item">
+     <a href="http://www.cherezov.info" class="proj_title" target="_blank">cherezov.info</a>
+     <ul class="proj_desc">
+      <li><b>Выполнен:</b> 2014 год</li>
+      <li><b>Описание:</b> Адаптивный персональный ресурс с уникальным дизайном и авторскими иллюстрациями для: путишественника, автора-исполнителя песен, писателя, дайвера... уфф..) ...и хорошего человека.</li>
+     </ul>
+     <img src="img/proj_screens/cherezov.info.png" alt="cherezov.info">
+    </div>
+    <!-- слайд №3 -->
+    <div class="slider_item">
+     <a href="http://www.vastway.com.ua" class="proj_title" target="_blank">vastway.com.ua</a>
+     <ul class="proj_desc">
+      <li><b>Выполнен:</b> 2008 год</li>
+      <li><b>Описание:</b> Адаптивный, высокопроизводительный ресурс с уникальными сервисами для компании, которая занимается юридическими и бухгалтерскими услугами, а так же веб-студия.</li>
+     </ul>
+     <img src="img/proj_screens/vastway.com.ua.png" alt="vastway.com.ua">
+    </div>
+    <!-- слайд №4 -->
+    <div class="slider_item">
+     <a href="http://www.komandasos.kiev.ua" class="proj_title" target="_blank">komandasos.kiev.ua</a>
+     <ul class="proj_desc">
+      <li><b>Выполнен:</b> 2015 год</li>
+      <li><b>Описание:</b> Адаптивный, высокопроизводительный ресурс для крупной стоительной компании.</li>
+     </ul>
+     <img src="img/proj_screens/komandasos.kiev.ua.png" alt="komandasos.kiev.ua">
+    </div>
+    <!-- слайд №5 -->
+    <div class="slider_item">
+     <a href="http://www.naos.com.ua" class="proj_title" target="_blank">naos.com.ua</a>
+     <ul class="proj_desc">
+      <li><b>Выполнен:</b> 2011 год</li>
+      <li><b>Описание:</b> Корпоративный ресурс с уникальным дизайном и авторскими иллюстрациями для компании, которая одна из первых "привела" в Украину технологию инфрокрасного отопления помещений.</li>
+     </ul>
+     <img src="img/proj_screens/naos.com.ua.png" alt="naos.com.ua">
+    </div>
+    <!-- слайд №6 -->
+    <div class="slider_item">
+     <a href="http://www.umacs.com.ua" class="proj_title" target="_blank">umacs.com.ua</a>
+     <ul class="proj_desc">
+      <li><b>Выполнен:</b> 2012 год</li>
+      <li><b>Описание:</b> Адаптивный одностраничник для консалтинговой компании.</li>
+     </ul>
+     <img src="img/proj_screens/umacs.com.ua.png" alt="umacs.com.ua">
+    </div>
+    <!-- слайд №7 -->
+    <div class="slider_item">
+     <a href="http://www.сантехник.com.ua" class="proj_title" target="_blank">сантехник.com.ua</a>
+     <ul class="proj_desc">
+      <li><b>Выполнен:</b> 2016 год</li>
+      <li><b>Описание:</b> Адаптивный, высокопроизводительный ресурс для команды сантехников.</li>
+     </ul>
+     <img src="img/proj_screens/сантехник.com.ua.png" alt="сантехник.com.ua">
+    </div>
+    <!-- слайд №8 -->
+    <div class="slider_item">
+     <a href="http://www.bioncorporation.com" class="proj_title" target="_blank">bioncorporation.com</a>
+     <ul class="proj_desc">
+      <li><b>Выполнен:</b> 2013 год</li>
+      <li><b>Описание:</b> Адаптивный, корпоративный ресурс с уникальным дизайном и авторскими иллюстрациями для фармацевтической компании.</li>
+     </ul>
+     <img src="img/proj_screens/bioncorporation.com.png" alt="bioncorporation.com">
+    </div>
+    <!-- слайд №9 -->
+    <div class="slider_item">
+     <a href="http://www.almrez.kiev.ua" class="proj_title" target="_blank">almrez.kiev.ua</a>
+     <ul class="proj_desc">
+      <li><b>Выполнен:</b> 2016 год</li>
+      <li><b>Описание:</b> Адаптивный, высокопроизводительный ресурс для строительной компании.</li>
+     </ul>
+     <img src="img/proj_screens/almrez.kiev.ua.png" alt="almrez.kiev.ua">
+    </div>
+   </div>
+  </div>
+  
   <!--####### Футер #######-->
   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://rawgit.com/kroloburet/TAGRA_CMS/master/UI_fraimwork/js.js"></script>
+  <script>
+   /////////////////////////////////////////////////////////////////////////слайдер
+   ;(function($){
+    var _conf,_time,_num,_items,_prev,_next,_count;
+    var def_conf={
+     start:false,//стартовать или нет после загрузки
+     pause_onhover:true,//пауза если курсор на слайдере
+     num:0,//начать показ с номера слайда
+     speed:300,//скорость анимации
+     delay:5000//задержка между сменой слайда
+    };
+    var methods={
+     init:function(user_conf){
+      _conf=$.extend({},def_conf,user_conf);
+      return this.each(function(){
+       var self=$(this);//текущий слайдер
+       _items=self.find('.slider_item');//набор слайдов
+       _next=self.find('.slider_next');//кнопка "следующий"
+       _prev=self.find('.slider_prev');//кнопка "предыдущий"
+       _count=_items.length;//всего слайдов
+       _num=_conf.num;//номер текущего слайда
+       _items.eq(_num).show();//начать показ с номера слайда
+       _conf.start?methods.start():false;//старт смены слайдов если нужно
+       _conf.start&&_conf.pause_onhover?self.hover(methods.pause,methods.start):false;//пауза если курсор на слайдере
+       _next.on('click.Slider',function(){methods.next();});//работа кнопки "следующий"
+       _prev.on('click.Slider',function(){methods.prev();});//работа кнопки "предыдущий"
+       $(document).on('scroll.Slider',function(){//позиция кнопок управления при прокрутке
+        var s_t=$(this).scrollTop();
+        var o_t=self.offset().top;
+        (s_t>=o_t)&&(s_t<=(o_t/2)+self.outerHeight())?_next.add(_prev).css('position','fixed'):_next.add(_prev).css('position','absolute');
+       });
+      });
+     },
+     start:function(){_time=setInterval(methods.next,_conf.delay);},
+     pause:function(){clearInterval(_time);},
+     next:function(){
+      _num=_count-1<=_num?0:_num+1;
+      _items.hide().eq(_num).fadeIn(_conf.speed);
+     },
+     prev:function(){
+      _num=_num===0?_count-1:_num-1;
+      _items.hide().eq(_num).fadeIn(_conf.speed);
+     }
+    };
+    $.fn.Slider=function(method){//работа методов
+     if(methods[method]){
+      return methods[method].apply(this,Array.prototype.slice.call(arguments,1));
+     }else if(typeof method==='object'||!method){
+      return methods.init.apply(this,arguments);
+     }else{$.error('Метод с именем '+method+' не существует');} 
+    };
+   })(jQuery);
+   $('.slider').Slider();//запуск слайдера скринов работ
+  </script>
   <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53f083b102776710" async="async"></script>
  </body>
 </html>
