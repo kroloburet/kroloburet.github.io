@@ -26,6 +26,6 @@ nav{margin:0;}
 .header h1{padding-bottom:.5em;}
 .headline{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;}
 .headline h1{margin-right:2%;}
-.i{box-shadow:0 0 0 18em #fff;border-radius:50%;transition:all .2s ease-in-out 0s;}
+.i{box-shadow:0 0 0 22em #fff;border-radius:50%;transition:all .2s ease-in-out 0s;}
 .i:hover{box-shadow: 0 0 0 2px #E7D977;}
 @media(max-width:600px){.i{max-width:200px;}.header{padding:2em 1% 0 1%;}}
