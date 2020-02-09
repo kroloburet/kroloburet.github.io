@@ -1,12 +1,12 @@
-/*
- ###########################################################
- # Developer: Sergey Nizhnik kroloburet@gmail.com
- ###########################################################
-*/
+/**
+ * @author Sergey Nizhnik <kroloburet@gmail.com>
+ */
 
-$(function(){//готовность DOM
+$(function() {
 
-//////////////////////////////////////////////////////////////загрузка альтернативного изображения
-$('img').on('error',function(){$(this).attr('src','img/noimg.svg').width(36);});
+  //загрузка альтернативного изображения
+  $('img').on('error', function() {
+    $(this).attr('src', 'img/noimg.svg').width(36);
+  });
 
-});//готовность DOM
+});
