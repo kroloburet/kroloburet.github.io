@@ -1,12 +1,13 @@
 <!doctype html>
-<html>
+<html lang="ru">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="author" content="Development and design by kroloburet@gmail.com">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all">
-    <link rel="image_src" href="https://kroloburet.github.io/img/i.jpg">
+    <link rel="icon" href="img/myicon.jpg">
+    <meta name="description" content="Меня зовут Сергей, я &mdash; веб-разработчик полного цикла. Мой опыт программирования и дизайна берёт начало в 2008 году и продолжается по сей день">
     <title>Привет, Мир! | kroloburet</title>
 
     <!--
@@ -14,49 +15,78 @@
     -->
 
     <!-- google -->
-    <meta itemprop="name" content="Мой персональный сайт | kroloburet">
-    <meta itemprop="description" content="Меня зовут Сергей, я - веб-разработчик. Мой опыт веб-разработки, программирования и дизайна стартовал в 2008 году и продолжается по сей день">
-    <meta itemprop="image" content="https://kroloburet.github.io/img/i.jpg">
+    <meta itemprop="name" content="Онлайн-логово веб-разработчика Kroloburet">
+    <meta itemprop="description" content="Меня зовут Сергей, я &mdash; веб-разработчик полного цикла. Мой опыт программирования и дизайна берёт начало в 2008 году и продолжается по сей день">
+    <meta itemprop="image" content="https://kroloburet.github.io/img/myicon_share.jpg">
     <!-- twitter -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="Мой персональный сайт | kroloburet">
+    <meta name="twitter:site" content="Онлайн-логово веб-разработчика Kroloburet">
     <meta name="twitter:title" content="Привет, Мир! | kroloburet">
-    <meta name="twitter:description" content="Меня зовут Сергей, я - веб-разработчик. Мой опыт веб-разработки, программирования и дизайна стартовал в 2008 году и продолжается по сей день">
-    <meta name="twitter:image:src" content="https://kroloburet.github.io/img/i.jpg">
+    <meta name="twitter:description" content="Меня зовут Сергей, я &mdash; веб-разработчик полного цикла. Мой опыт программирования и дизайна берёт начало в 2008 году и продолжается по сей день">
+    <meta name="twitter:image:src" content="https://kroloburet.github.io/img/myicon_share.jpg">
     <meta name="twitter:domain" content="https://kroloburet.github.io">
     <!-- facebook -->
     <meta property="og:title" content="Привет, Мир! | kroloburet">
-    <meta property="og:description" content="Меня зовут Сергей, я - веб-разработчик. Мой опыт веб-разработки, программирования и дизайна стартовал в 2008 году и продолжается по сей день">
-    <meta property="og:image" content="https://kroloburet.github.io/img/i.jpg">
-    <meta property="og:image:width" content="438">
-    <meta property="og:image:height" content="438">
+    <meta property="og:description" content="Меня зовут Сергей, я &mdash; веб-разработчик полного цикла. Мой опыт программирования и дизайна берёт начало в 2008 году и продолжается по сей день">
+    <meta property="og:image" content="https://kroloburet.github.io/img/myicon_share.jpg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="600">
     <meta property="og:url" content="https://kroloburet.github.io">
-    <meta property="og:site_name" content="Мой персональный сайт | kroloburet">
+    <meta property="og:site_name" content="Онлайн-логово веб-разработчика Kroloburet">
     <!-- другие -->
+    <link rel="image_src" href="https://kroloburet.github.io/img/myicon_share.jpg">
+    <!--разметка контактов-->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "email": "mailto:kroloburet@gmail.com",
+      "image": "https://kroloburet.github.io/img/myicon_share.jpg",
+      "jobTitle": "Web development and design",
+      "name": "Kroloburet",
+      "sameAs": "https://kroloburet.github.io"
+    }
+    </script>
 
     <!-- презагрузка страницы -->
     <style>#preload_lay{display:block;position:fixed;z-index:99999;top:0;left:0;width:100%;height:100%;background-color:#fff}#preload{box-sizing:border-box;margin:-50px;position:absolute;top:50%;left:50%;border:7px solid rgba(180,180,180,0.2);border-left-color:var(--color-base);-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0);-webkit-animation:load 1.1s infinite linear;animation:load 1.1s infinite linear}#preload,#preload:after{border-radius:50%;width:100px;height:100px}@-webkit-keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style>
     <script>window.onload = function() {document.getElementById("preload_lay").style.display = "none";};</script>
 
-    <link rel="icon" href="img/myicon.jpeg">
 
     <style>
-      .advant{text-align:center;max-width:1000px;margin:2em auto;padding:0 1%;}
-      .advant span{padding-bottom:.2em;font-size:7em;display:block;color:var(--color-base);}
-      #projs{margin-bottom:2em;padding:0 1%;}
-      #projs h2{font-size:2.2em;margin:0;padding:0 0 1em 0;text-align:center;}
-      /*-------slider*/
+      /*------------------------------------------------------------------------------MENU---*/
+      nav{position:absolute;}
+      .menu{background-color:transparent;}
+      @media(max-width:800px){nav{position:relative;}.menu{background-color:var(--color-base)}}
+      /*------------------------------------------------------------------------------HEADER---*/
+      header{display:flex;align-items:center;min-height:100vh;padding:3em;background-color:var(--color-faint);overflow:hidden;}
+      #i{margin-right:3em;box-shadow:200vh 80vh 0 40vh #a5d0a8,90vh 160vh 0 130vh var(--color-base-bg),0 0 0 50vh var(--color-base);border-radius:50%;transition:all .2s ease-in-out .1s;}
+      #i:hover{box-shadow:0 0 0 1px var(--color-base-bg),0 0 10px 3px var(--color-base);}
+      #i_say{position:relative;align-self:flex-start;max-width:50%;padding:0 1em;border-radius:1em;background-color:var(--color-akcent);font-size:110%;color:#fff;}
+      #i_say:after{content:'';position:absolute;top:40%;left:-2.3em;transform:rotate(-25deg);border-bottom:2em solid var(--color-akcent);border-left:3em solid transparent;}
+      @media(max-width:800px){header{flex-direction:column-reverse;justify-content:flex-end;height:90vh;min-height:90vh;padding:2em 3%;}#i{min-width:100px;max-width:300px;margin:3em 0 0 0;box-shadow:50vh 60vh 0 60vh var(--color-base),-65vh 30vh 0 50vh var(--color-base-bg),0 0 0 2vh #a5d0a8;}#i_say{max-width:100%;font-size:100%;}#i_say:after{top:100%;left:25%;transform:rotate(-100deg);}}
+      /*------------------------------------------------------------------------------MINE---*/
+      .skill{display:flex;align-items:center;}
+      .skill .fa-ellipsis-h{padding:0 .5em;vertical-align:middle;}
+      .skill > i {flex-basis:1.6em;flex-shrink:0;font-size:5em;color:var(--color-akcent);}
+      .skill > ul {margin:0;padding-left:1em;}
+      .skill > ul li > div{display:none;margin:.5em 0;padding:.5em 1em;border-radius:.5em;background-color:var(--color-faint);}
+      .skill > ul li > div p:last-child{margin-bottom:0;}
+      @media(max-width:800px){.about.col9{width:65.666667%;}.contacts.col3{width:31.333333%;}.skill > i{font-size:8vw;flex-basis:15vw}}
+      @media(max-width:400px){.skill{flex-direction:column;}.skill > i{flex-basis:25vw;font-size:20vw;}}
+      /*------------------------------------------------------------------------------SLIDER---*/
+      #projs h2{text-align:center;}
       .slider{position:relative;overflow:hidden;}
       .slider_item{display:none;height:100%;max-width:1000px;margin:0 auto;}
       .proj_title{font-size:1.7em;display:inline-block;margin-bottom:.3em;}
       .proj_desc{padding:0;margin:0 0 .5em 0;list-style:none;}
-      .slider_prev,.slider_next{display:none;position:fixed;top:50%;font-size:8em;color:var(--color-link);z-index:100;margin-top:-0.5em;cursor:pointer;opacity:0.8;text-shadow: 1px 1px 0 #fff;}
-      .slider_prev{left:1%;}
-      .slider_next{right:1%;}
+      .slider_prev,.slider_next{display:none;position:fixed;top:50%;margin-top:-5vw;width:10vw;height:10vw;max-width:60px;max-height:60px;border:8px solid var(--color-link);border-left:none;border-top:none;z-index:100;cursor:pointer;opacity:0.8;}
+      .slider_prev{left:3%;transform:rotate(135deg);}
+      .slider_next{right:3%;transform:rotate(-45deg);}
       .slider_prev:hover,.slider_next:hover{opacity:1;}
     </style>
   </head>
-  <body>
+  <body id="body">
 
     <!-- презагрузка страницы -->
     <div id="preload_lay">
@@ -78,303 +108,321 @@
     ########### Header
     -->
 
-    <div class="row header">
-      <img class="col3 i" src="img/i.jpg" alt="Это я..)">
-      <div class="col9">
-        <div class="headline">
-          <h1>Привет, Мир!</h1>
-          <div class="addthis_sharing_toolbox"></div>
-        </div>
-        <p>Меня зовут Сергей, я - веб-разработчик. Мой опыт веб-разработки, программирования и дизайна стартовал в 2008 году и продолжается по сей день. Несколько лет трудился арт-директором, а сейчас работаю удаленно и постоянно учусь новым возможностям в IT сфере. В 2014 году разработал систему управления контентом которую усовершенствую и использую как движок для высокопроизводительных  и простых в администрировании сайтов моим клиентам.</p>
-        <p>Эта система разработана для реализации веб-ресурсов (корпоративных, магазинов, визиток, промо) с адаптивным дизайном и высокой производительностью. Также система может служить базой для разработки более масштабных и сложных веб-проектов. Дизайн и функционал сайтов разрабатываю под индивидуальные потребности и задачи клиентов. В отличии от более «тяжеловесных» CMS общего назначения (Joomla, WordPress и т.д), используется меньше программного кода, библиотек, не перегружена лишним и проста в администрировании. В результате ресурсы выдают высокие показатели скорости загрузки страниц (80% - 95%) по Google PageSpeed.</p>
-        <p>Все, что нужно для моей работы у меня есть: Интернет, мой ноутбук под Linux и желание разрабатывать успешные, современные веб-проекты. А еще, я считаю, что любой проект может стать уникальным. Итак, с удовольствием украшу веб Вашим проектом..) <a href="mailto:kroloburet@gmail.com">kroloburet@gmail.com</a></p>
+    <header>
+      <img id="i" src="img/i.jpg" alt="Это я..)">
+      <div id="i_say">
+        <h1>Привет, Мир!</h1>
+        <p>Самое время заявить о себе 👋</p>
       </div>
-    </div>
+    </header>
 
     <!--
-    ########### Преимущества
+    ########### Main
     -->
 
-    <div class="row advant">
-      <div class="col4">
-        <span class="fas fa-puzzle-piece"></span>
-        Работа в команде с профессиональным копирайтером, адаптивная верстка.
-      </div>
-      <div class="col4">
-        <span class="fas fa-star"></span>
-        Авторские иллюстрации, макеты, уникальный дизайн.
-      </div>
-      <div class="col4">
-        <span class="fas fa-rocket"></span>
-        Высокая производительность сайтов разработанных специально под Ваши задачи.
-      </div>
-    </div>
+    <main>
 
-    <!--
-    ########### Слайдер выполненных проектов
-    -->
+      <!--
+      ########### О себе и контакты
+      -->
 
-    <div id="projs">
-      <h2>Выполненные проекты</h2>
-      <div class="slider row">
-        <span class="slider_prev fas fa-angle-left"></span>
-        <span class="slider_next fas fa-angle-right"></span>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="https://www.ovk.expert/" class="proj_title" target="_blank">
-            <img data-src="https://www.ovk.expert/favicon.ico">&nbsp;ovk.expert
-          </a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2019 год</li>
-            <li><b>Описание:</b> Адаптивный ресурс для крупной инженерно-строительной компании.</li>
-          </ul>
-          <img data-src="img/proj_screens/ovk.expert.jpg" alt="ovk.expert">
+      <div class="row container">
+        <div class="col9 about">
+          <h2>Немного о себе</h2>
+          <p>Меня зовут Сергей, я &mdash; веб-разработчик полного цикла. Мой опыт программирования и дизайна берёт начало в 2008 году и продолжается по сей день. Несколько лет трудился арт-директором, а сейчас работаю удаленно и постоянно учусь новым возможностям в IT.</p>
+          <p>Ещё в нулевых, когда Google только начинал упорядочивать хаос в Интернете, а сайты и веб-технологии были относительно примитивны, мне стало интересно, а как же это работает. Любопытство стало моей мотивацией, а самообразование и опыт переросли в профессию.</p>
+          <p>Я не люблю работать впопыхах и кое-как. Дорожу своей репутацией. Всегда обсуждаю с клиентом задание и консультирую, чтобы избежать ошибок на этапе проектирования и предоставить наилучший результат. В свободное время занимаюсь спортом и самообразованием.</p>
+          <p>Всё, что нужно для моей работы, у меня есть: Интернет, ноутбук под Linux и желание разрабатывать успешные веб-проекты. Мой подход к веб-разработке как к ручной работе: всё должно быть <q>подогнано</q> индивидульно. Итак, с удовольствием украшу веб вашим проектом..)</p>
         </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.dias-co.com" class="proj_title" target="_blank">
-            <img data-src="http://www.dias-co.com/favicon.ico">&nbsp;dias-co.com
-          </a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2015 год</li>
-            <li><b>Описание:</b> Адаптивный ресурс для крупной консалтинговой компании.</li>
+        <div class="col3 contacts">
+          <h2>На связи</h2>
+          <ul>
+            <li><i class="fas fa-envelope"></i><a href="mailto:kroloburet@gmail.com" target="_blank">kroloburet@gmail.com</a></li>
+            <li><i class="fab fa-telegram-plane"></i><a href="https://t.me/kroloburet" target="_blank">@kroloburet</a></li>
+            <li><i class="fab fa-viber"></i><a href="viber://chat?number=+380931178366" target="_blank">написать в viber</a></li>
           </ul>
-          <img data-src="img/proj_screens/dias-co.com.jpg" alt="dias-co.com">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="https://www.howkit.club" class="proj_title" target="_blank">
-            <img data-src="https://www.howkit.club/favicon.ico">&nbsp;howkit.club
-          </a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2018 год</li>
-            <li><b>Описание:</b> Адаптивный, мультиязычный развлекательный ресурс. Так же разработан логотип.</li>
-          </ul>
-          <img data-src="img/proj_screens/howkit.club.jpg" alt="howkit.club">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.cherezov.info" class="proj_title" target="_blank">
-            <img data-src="http://www.cherezov.info/favicon.ico">&nbsp;cherezov.info
-          </a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2014 год</li>
-            <li><b>Описание:</b> Адаптивный персональный ресурс с уникальным дизайном и авторскими иллюстрациями для: путешественника, автора-исполнителя песен, писателя, дайвера... уфф..) ...и хорошего человека.</li>
-          </ul>
-          <img data-src="img/proj_screens/cherezov.info.jpg" alt="cherezov.info">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.rezka-betona.com.ua/" class="proj_title" target="_blank">
-            <img data-src="http://www.rezka-betona.com.ua/favicon.ico">&nbsp;rezka-betona.com.ua
-          </a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2017 год</li>
-            <li><b>Описание:</b> Адаптивный, высокопроизводительный ресурс для компании которая занимается резкой бетона. Так же разработан логотип и фирменный стиль.</li>
-          </ul>
-          <img data-src="img/proj_screens/rezka-betona.com.ua.jpg" alt="rezka-betona.com.ua">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.vastway.com.ua" class="proj_title" target="_blank">
-            <img data-src="http://www.vastway.com.ua/favicon.ico">&nbsp;vastway.com.ua
-          </a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2008 год</li>
-            <li><b>Описание:</b> Адаптивный, высокопроизводительный ресурс с уникальными сервисами для компании, которая занимается юридическими и бухгалтерскими услугами, а так же веб-студия.</li>
-          </ul>
-          <img data-src="img/proj_screens/vastway.com.ua.jpg" alt="vastway.com.ua">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.productorg.com.ua" class="proj_title" target="_blank">
-            <img data-src="http://www.productorg.com.ua/favicon.ico">&nbsp;productorg.com.ua
-          </a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2018 год</li>
-            <li><b>Описание:</b> Адаптивный интернет-магазин европейских продуктов. Так же разработан логотип и фирменный стиль.</li>
-          </ul>
-          <img data-src="img/proj_screens/productorg.com.ua.jpg" alt="productorg.com.ua">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.komandasos.kiev.ua" class="proj_title" target="_blank">
-            <img data-src="http://www.komandasos.kiev.ua/favicon.ico">&nbsp;komandasos.kiev.ua</a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2015 год</li>
-            <li><b>Описание:</b> Адаптивный, высокопроизводительный ресурс для крупной строительной компании.</li>
-          </ul>
-          <img data-src="img/proj_screens/komandasos.kiev.ua.jpg" alt="komandasos.kiev.ua">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.naos.com.ua" class="proj_title" target="_blank">
-            <img data-src="http://www.naos.com.ua/favicon.ico">&nbsp;naos.com.ua</a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2011 год</li>
-            <li><b>Описание:</b> Корпоративный ресурс с уникальным дизайном и авторскими иллюстрациями для компании, которая одна из первых "привела" в Украину технологию инфрокрасного отопления помещений.</li>
-          </ul>
-          <img data-src="img/proj_screens/naos.com.ua.jpg" alt="naos.com.ua">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.umacs.com.ua" class="proj_title" target="_blank">
-            <img data-src="http://www.umacs.com.ua/favicon.ico">&nbsp;umacs.com.ua</a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2012 год</li>
-            <li><b>Описание:</b> Адаптивный одностраничник для консалтинговой компании.</li>
-          </ul>
-          <img data-src="img/proj_screens/umacs.com.ua.jpg" alt="umacs.com.ua">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.сантехник.com.ua" class="proj_title" target="_blank">
-            <img data-src="http://www.сантехник.com.ua/favicon.ico">&nbsp;сантехник.com.ua</a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2016 год</li>
-            <li><b>Описание:</b> Адаптивный, высокопроизводительный ресурс для команды сантехников.</li>
-          </ul>
-          <img data-src="img/proj_screens/сантехник.com.ua.jpg" alt="сантехник.com.ua">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.bioncorporation.com" class="proj_title" target="_blank">
-            <img data-src="http://www.bioncorporation.com/favicon.ico">&nbsp;bioncorporation.com</a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2013 год</li>
-            <li><b>Описание:</b> Адаптивный, корпоративный ресурс с уникальным дизайном и авторскими иллюстрациями для фармацевтической компании.</li>
-          </ul>
-          <img data-src="img/proj_screens/bioncorporation.com.jpg" alt="bioncorporation.com">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.almrez.kiev.ua" class="proj_title" target="_blank">
-            <img data-src="http://www.almrez.kiev.ua/favicon.ico">&nbsp;almrez.kiev.ua</a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2016 год</li>
-            <li><b>Описание:</b> Адаптивный, высокопроизводительный ресурс для строительной компании.</li>
-          </ul>
-          <img data-src="img/proj_screens/almrez.kiev.ua.jpg" alt="almrez.kiev.ua">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.vorotavgarage.pro/" class="proj_title" target="_blank">
-            <img data-src="http://www.vorotavgarage.pro/favicon.ico">&nbsp;vorotavgarage.pro</a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2018 год</li>
-            <li><b>Описание:</b> Адаптивный ресурс для компании которая продает и обслуживает секционные ворота.</li>
-          </ul>
-          <img data-src="img/proj_screens/vorotavgarage.pro.jpg" alt="vorotavgarage.pro">
-        </div>
-        <!-- слайд -->
-        <div class="slider_item">
-          <a href="http://www.air-go.com.ua/" class="proj_title" target="_blank">
-            <img data-src="http://www.air-go.com.ua/favicon.ico">&nbsp;air-go.com.ua</a>
-          <ul class="proj_desc">
-            <li><b>Выполнен:</b> 2018 год</li>
-            <li><b>Описание:</b> Адаптивный ресурс для официального дистрибьютора европейских производителей проветривателей помещений «Ventec» и «Titon» в Украине.</li>
-          </ul>
-          <img data-src="img/proj_screens/air-go.com.ua.jpg" alt="air-go.com.ua">
+          <img src="img/qr.svg" alt="vcard" class="qr" title="Сканируйте чтобы добавить в контакты">
+          <h4>Расскажите обо мне</h4>
+          <div class="addthis_inline_share_toolbox"></div>
+          <h4>Я в соцсетях</h4>
+          <div class="addthis_inline_follow_toolbox_ufw9"></div>
         </div>
       </div>
-    </div>
+
+      <!--
+      ########### Навыки
+      -->
+
+      <div class="skill container">
+        <i class="fas fa-pencil-ruler"></i>
+        <ul>
+          <li>
+            UI/UX, HTML5, CSS3. Адаптивная вёрстка веб-страниц и макетов. Прототипирование <a href="#" class="fas fa-ellipsis-h" onclick="TUI.Toggle('#layout_info');return false" title="Показать/скрыть подробности"></a>
+            <div id="layout_info">
+              <p>Использую <q>абсолютную адаптивность</q> &mdash; когда вёрстка адаптивна на любом устройстве при любой ширине экрана, а не только на некоторых. Считаю, что адаптивная вёрстка давно стала частью стандартов современного веба, поэтому не пытаюсь продать это как нечто особенное. <a href="http://ami.responsivedesign.is/?url=https%3A%2F%2Fkroloburet.github.io" target="_blank">Тест этой страницы на адаптивность</a></p>
+              <p>Не использую Bootstrap, SASS, LESS, а также прочие препроцессоры и тяжёлые UI, где это нецелесообразно и избыточно. Вместо этого на вооружении все возможности современного HTML5 и CSS3. Разработал небольшой <a href="https://github.com/kroloburet/TAGRA_CMS/tree/master/Tagra_UI" target="_blank">UI</a> для вёрстки простых интерфейсов в несложных проектах.</p>
+            </div>
+          </li>
+          <li>
+            Разработка веб-дизайна, логотипов и значков, работа с векторной и растровой графикой <a href="#" class="fas fa-ellipsis-h" onclick="TUI.Toggle('#design_info');return false" title="Показать/скрыть подробности"></a>
+            <div id="design_info">
+              В приоритете &mdash; разрабатывать уникальный дизайн, а не использовать готовые <q>шаблоны-болванки</q>. Обсуждаю и проектирую дизайн вместе с клиентом, учитывая поведение пользователей и поставленные цели. В дизайне руководствуюсь такими принципами, как: минимализм, гармоничность, простота, доступность и производительность. Для создания и редактирования лого, значков и изображений использую такие редакторы векторной и растровой графики, как GIMP и Inkscape. Предпочитаю работать именно с векторной графикой, поскольку она хорошо масштабируется с минимальными потерями качества и легковесна.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skill container">
+        <i class="fas fa-rocket"></i>
+        <ul>
+          <li>
+            Разработка производительных веб-преложений <a href="#" class="fas fa-ellipsis-h" onclick="TUI.Toggle('#dev_info');return false" title="Показать/скрыть подробности"></a>
+            <div id="dev_info">
+              <p>C 2014 использую и развиваю свой движок <q><a href="https://github.com/kroloburet/TAGRA_CMS" target="_blank">Tagra CMS</a></q> для реализации веб-ресурсов (корпоративных, визиток, промо) с адаптивным дизайном и высокой производительностью. Система может спокойно служить базой для разработки и более масштабных и сложных веб-проектов. В отличие от <q>тяжеловесных</q> CMS (Joomla, WordPress и т.д), Tagra использует меньше программного кода и библиотек, не перегружена лишним, проста в администрировании. Написана на базе PHP-фреймворка CodeIgniter.</p>
+              <p>До 2014 года разрабатывал веб-сайты на движках WordPress, Joomla и т.п. Изучая их устройство, сталкивался с избыточностью, проблемами с безопасностью и как попало написанным кодом. При этом качество сторонних плагинов и шаблонов было вовсе отвратительное. Чтобы создать качественный и производительный ресурс, приходилось не только разрабатывать шаблон, но и искать хорошо написанные плагины и компоненты, либо писать их самостоятелно. А чтобы добиться приемлемой скорости загрузки, нужно было отключать и удалять кучу скриптов, библиотек, таблиц стилей и прочей неиспользуемой мишуры.</p>
+              <p>Для сайтов <q>на скорую руку</q> эти CMS вполне подходят, меня же такая работа не устраивала. Я уважаю труд разработчиков-энтузиастов свободного ПО и понимаю, что эти движки расчитаны на широкую аудиторию и универсальность. Но этот подход влечёт избыточность и низкую производительность системы.</p>
+            </div>
+          </li>
+          <li>
+            Оптимизация производительности, вывод в <q>зелёную зону</q> Google PageSpeed, аудит <a href="#" class="fas fa-ellipsis-h" onclick="TUI.Toggle('#speed_info');return false" title="Показать/скрыть подробности"></a>
+            <div id="speed_info">
+              Скорость загрузки имеет значение. Я уделяю особое внимание этому аспекту на всех стадиях разработки веб-приложения. <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fkroloburet.github.io" target="_blank">Тест этой страницы в Google PageSpeed</a> Провожу аудит и оптимизацию как отдельных страниц, так и целых веб-сайтов. Консультирую по вопросам производительности. Устраняю проблемы, связанные с медленной загрузкой в существующих проектах.
+            </div>
+          </li>
+          <li>
+            SEO-оптимизация, юзабилити и аудит, микроразметка <a href="#" class="fas fa-ellipsis-h" onclick="TUI.Toggle('#seo_info');return false" title="Показать/скрыть подробности"></a>
+            <div id="seo_info">
+              <p>Разметка структурированных данных (микроразметка) страниц для поисковых систем и соцсетей. <a href="https://search.google.com/structured-data/testing-tool/u/0/?hl=ru#url=https%3A%2F%2Fkroloburet.github.io" target="_blank">Тест микроразметки этой страницы</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skill container">
+        <i class="fas fa-laptop-code"></i>
+        <ul>
+          <li>
+            Работа с Linux, настройка сервера, cron, ssh, shell и bash-скрипты
+          </li>
+          <li>
+            Использую: PHP, SQL, Regex, JavaScript, Vue.js, jQuery, jQuery UI, JSON, AJAX, CodeIgniter, Laravel, MVC, OOP, API, Git, Composer, Docker, Apache, Nginx, MySQL, MariaDB, phpMyAdmin <a href="#" class="fas fa-ellipsis-h" onclick="TUI.Toggle('#use_info');return false" title="Показать/скрыть подробности"></a>
+            <div id="use_info">
+              <p>Ни один разработчик не держит в памяти эти огромные объёмы информации, тем более, что информация постоянно меняется и дополняется. Значение имеет то, как эффективно разработчик умеет гуглить 😆</p>
+              <p>Я уважаю труд моих коллег, поэтому стараюсь писать аккуратный код и комментировать его. <a href="view-source:" target="_blank">Код этой страницы</a> Регулярно перечитываю документацию, разбираюсь в чужом коде, слежу за новыми возможностями и технологиями в IT.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!--
+      ########### Слайдер выполненных проектов
+      -->
+
+      <div class="container" id="projs">
+        <h2>Выполненные проекты</h2>
+        <div class="slider row">
+          <span class="slider_prev"></span>
+          <span class="slider_next"></span>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="https://www.ovk.expert/" class="proj_title" target="_blank">
+              <img data-src="https://www.ovk.expert/favicon.ico">&nbsp;ovk.expert
+            </a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2019 год</li>
+              <li><b>Описание:</b> Адаптивный ресурс для крупной инженерно-строительной компании.</li>
+            </ul>
+            <img data-src="img/proj_screens/ovk.expert.jpg" alt="ovk.expert">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.dias-co.com" class="proj_title" target="_blank">
+              <img data-src="http://www.dias-co.com/favicon.ico">&nbsp;dias-co.com
+            </a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2015 год</li>
+              <li><b>Описание:</b> Адаптивный ресурс для крупной консалтинговой компании.</li>
+            </ul>
+            <img data-src="img/proj_screens/dias-co.com.jpg" alt="dias-co.com">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="https://www.howkit.club" class="proj_title" target="_blank">
+              <img data-src="https://www.howkit.club/favicon.ico">&nbsp;howkit.club
+            </a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2018 год</li>
+              <li><b>Описание:</b> Адаптивный мультиязычный развлекательный ресурс. Также разработан логотип.</li>
+            </ul>
+            <img data-src="img/proj_screens/howkit.club.jpg" alt="howkit.club">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.cherezov.info" class="proj_title" target="_blank">
+              <img data-src="http://www.cherezov.info/favicon.ico">&nbsp;cherezov.info
+            </a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2014 год</li>
+              <li><b>Описание:</b> Адаптивный персональный ресурс с уникальным дизайном и авторскими иллюстрациями для: путешественника, автора-исполнителя песен, писателя, дайвера... уфф..) ...и хорошего человека.</li>
+            </ul>
+            <img data-src="img/proj_screens/cherezov.info.jpg" alt="cherezov.info">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.rezka-betona.com.ua/" class="proj_title" target="_blank">
+              <img data-src="http://www.rezka-betona.com.ua/favicon.ico">&nbsp;rezka-betona.com.ua
+            </a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2017 год</li>
+              <li><b>Описание:</b> Адаптивный высокопроизводительный ресурс для компании, которая занимается резкой бетона. Также разработан логотип и фирменный стиль.</li>
+            </ul>
+            <img data-src="img/proj_screens/rezka-betona.com.ua.jpg" alt="rezka-betona.com.ua">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.vastway.com.ua" class="proj_title" target="_blank">
+              <img data-src="http://www.vastway.com.ua/favicon.ico">&nbsp;vastway.com.ua
+            </a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2008 год</li>
+              <li><b>Описание:</b> Адаптивный высокопроизводительный ресурс с уникальными сервисами для компании, которая занимается юридическими и бухгалтерскими услугами, а также веб-студия.</li>
+            </ul>
+            <img data-src="img/proj_screens/vastway.com.ua.jpg" alt="vastway.com.ua">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.productorg.com.ua" class="proj_title" target="_blank">
+              <img data-src="http://www.productorg.com.ua/favicon.ico">&nbsp;productorg.com.ua
+            </a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2018 год</li>
+              <li><b>Описание:</b> Адаптивный интернет-магазин европейских продуктов. Также разработан логотип и фирменный стиль.</li>
+            </ul>
+            <img data-src="img/proj_screens/productorg.com.ua.jpg" alt="productorg.com.ua">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.komandasos.kiev.ua" class="proj_title" target="_blank">
+              <img data-src="http://www.komandasos.kiev.ua/favicon.ico">&nbsp;komandasos.kiev.ua</a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2015 год</li>
+              <li><b>Описание:</b> Адаптивный высокопроизводительный ресурс для крупной строительной компании.</li>
+            </ul>
+            <img data-src="img/proj_screens/komandasos.kiev.ua.jpg" alt="komandasos.kiev.ua">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.naos.com.ua" class="proj_title" target="_blank">
+              <img data-src="http://www.naos.com.ua/favicon.ico">&nbsp;naos.com.ua</a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2011 год</li>
+              <li><b>Описание:</b> Корпоративный ресурс с уникальным дизайном и авторскими иллюстрациями для компании, которая одна из первых <q>привела</q> в Украину технологию инфракрасного отопления помещений.</li>
+            </ul>
+            <img data-src="img/proj_screens/naos.com.ua.jpg" alt="naos.com.ua">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.umacs.com.ua" class="proj_title" target="_blank">
+              <img data-src="http://www.umacs.com.ua/favicon.ico">&nbsp;umacs.com.ua</a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2013 год</li>
+              <li><b>Описание:</b> Адаптивный одностраничник для консалтинговой компании.</li>
+            </ul>
+            <img data-src="img/proj_screens/umacs.com.ua.jpg" alt="umacs.com.ua">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.сантехник.com.ua" class="proj_title" target="_blank">
+              <img data-src="http://www.сантехник.com.ua/favicon.ico">&nbsp;сантехник.com.ua</a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2016 год</li>
+              <li><b>Описание:</b> Адаптивный высокопроизводительный ресурс для команды сантехников.</li>
+            </ul>
+            <img data-src="img/proj_screens/сантехник.com.ua.jpg" alt="сантехник.com.ua">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.bioncorporation.com" class="proj_title" target="_blank">
+              <img data-src="http://www.bioncorporation.com/favicon.ico">&nbsp;bioncorporation.com</a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2012 год</li>
+              <li><b>Описание:</b> Адаптивный корпоративный ресурс с уникальным дизайном и авторскими иллюстрациями для фармацевтической компании.</li>
+            </ul>
+            <img data-src="img/proj_screens/bioncorporation.com.jpg" alt="bioncorporation.com">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.almrez.kiev.ua" class="proj_title" target="_blank">
+              <img data-src="http://www.almrez.kiev.ua/favicon.ico">&nbsp;almrez.kiev.ua</a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2016 год</li>
+              <li><b>Описание:</b> Адаптивный высокопроизводительный ресурс для строительной компании.</li>
+            </ul>
+            <img data-src="img/proj_screens/almrez.kiev.ua.jpg" alt="almrez.kiev.ua">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.vorotavgarage.pro/" class="proj_title" target="_blank">
+              <img data-src="http://www.vorotavgarage.pro/favicon.ico">&nbsp;vorotavgarage.pro</a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2018 год</li>
+              <li><b>Описание:</b> Адаптивный ресурс для компании, которая продает и обслуживает секционные ворота.</li>
+            </ul>
+            <img data-src="img/proj_screens/vorotavgarage.pro.jpg" alt="vorotavgarage.pro">
+          </div>
+          <!-- слайд -->
+          <div class="slider_item">
+            <a href="http://www.air-go.com.ua/" class="proj_title" target="_blank">
+              <img data-src="http://www.air-go.com.ua/favicon.ico">&nbsp;air-go.com.ua</a>
+            <ul class="proj_desc">
+              <li><b>Выполнен:</b> 2018 год</li>
+              <li><b>Описание:</b> Адаптивный ресурс для официального дистрибьютора европейских производителей проветривателей помещений «Ventec» и «Titon» в Украине.</li>
+            </ul>
+            <img data-src="img/proj_screens/air-go.com.ua.jpg" alt="air-go.com.ua">
+          </div>
+        </div>
+      </div>
+    </main>
 
     <!--
     ########### Footer
     -->
 
+    <footer>
+      <div class="container">
+        <div class="copyright">
+          <img src="img/myicon.jpg" alt="kroloburet">&nbsp;Kroloburet&nbsp;&COPY;
+          <hr>
+          Онлайн-логово веб-разработчика
+        </div>
+        <img src="img/qr.svg" alt="vcard" class="qr" title="Сканируйте чтобы добавить в контакты">
+        <div class="contacts">
+          <ul>
+            <li><i class="fas fa-envelope"></i><a href="mailto:kroloburet@gmail.com" target="_blank">kroloburet@gmail.com</a></li>
+            <li><i class="fab fa-telegram-plane"></i><a href="https://t.me/kroloburet" target="_blank">@kroloburet</a></li>
+            <li><i class="fab fa-viber"></i><a href="viber://chat?number=+380931178366" target="_blank">написать в viber</a></li>
+          </ul>
+          <h4>Расскажите обо мне</h4>
+          <div class="addthis_inline_share_toolbox"></div>
+          <h4>Я в соцсетях</h4>
+          <div class="addthis_inline_follow_toolbox_ufw9"></div>
+        </div>
+      </div>
+    </footer>
+    <div class="go_top_btn noprint" onclick="TUI.GoTo('#body')">
+      <i class="fas fa-angle-up"></i>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://rawgit.com/kroloburet/TAGRA_CMS/master/Tagra_UI/script.js"></script>
     <script src="js/general.js"></script>
     <script>
-      /**
-       * Слайдер выпоненнных проектов
-       */
-      class Slider {
-        conf = {
-          start: false, // стартовать или нет после загрузки
-          pause_onhover: true, // пауза если курсор на слайдере
-          num: 0, // начать показ с номера слайда
-          speed: 300, // скорость анимации
-          delay: 5000// задержка между сменой слайда
-        }
-
-        constructor(el, conf) {
-          if (typeof el === 'undefined') {return false;}
-          this.el = $(el) || {};
-          typeof conf === 'object' ? Object.assign(this.conf, conf) : null;
-          return this.el.each((i, e) => {
-            let self = $(e),
-                imgs = self.find('img'),// все изображения слайдера
-                next = self.find('.slider_next'),// кнопка "следующий"
-                prev = self.find('.slider_prev');// кнопка "предыдущий"
-            this.items = self.find('.slider_item');// набор слайдов
-            this.count = this.items.length;// всего слайдов
-            this.num = this.conf.num;// номер текущего слайда
-            // начать показ с номера слайда
-            this.items.eq(this.num).show();
-            // старт смены слайдов если нужно
-            this.conf.start ? this.start() : null;
-            // пауза если курсор на слайдере
-            this.conf.start && this.conf.pause_onhover
-              ? self.hover(() => {this.pause();}, () => {this.start();})
-              : null;
-            // работа кнопки "следующий"
-            next.on('click.Slider', () => {
-              TUI.GoTo('#projs');
-              this.next();
-            });
-            // работа кнопки "предыдущий"
-            prev.on('click.Slider', () => {
-              TUI.GoTo('#projs');
-              this.prev();
-            });
-            // отображение кнопок управления при прокрутке и отложенная загрузка изображений
-            $(window).on('scroll.Slider', function() {
-              let s_t = $(this).scrollTop(),
-                  o_t = self.offset().top,
-                  w_h = $(this).outerHeight(true);
-              // отложенная загрузка изображений
-              if ((s_t + w_h) >= o_t) {
-                imgs.each(function(){
-                  let img = $(this);
-                  !img.attr('src') ? img.attr('src', img.data('src')) : null;
-                });
-              }
-              // отображение кнопок управления
-              (s_t >= o_t) && (s_t <= (o_t + self.outerHeight()))
-                ? next.add(prev).show()
-                : next.add(prev).hide();
-            });
-          });
-        }
-
-        start() {
-          this.time = setInterval(() => this.next(), this.conf.delay);
-        }
-
-        pause() {
-            clearInterval(this.time);
-        }
-
-        next() {
-          this.num = this.count - 1 <= this.num ? 0 : this.num + 1;
-          this.items.hide().eq(this.num).fadeIn(this.conf.speed);
-        }
-
-        prev() {
-          this.num = this.num === 0 ? this.count - 1 : this.num - 1;
-          this.items.hide().eq(this.num).fadeIn(this.conf.speed);
-        }
-      }
-
-      /**
-       * Отложенная загрузка ресурсов
-       */
       ;(function() {
+
         /**
-         * CSS
+         * Отложенная загрузка ресурсов
          */
+        //////////// CSS
         const head = document.getElementsByTagName('head')[0];
         // иконочный шрифт
         const fa = document.createElement('link');
@@ -391,22 +439,128 @@
         tu.rel = 'stylesheet';
         tu.href = "https://rawgit.com/kroloburet/TAGRA_CMS/master/Tagra_UI/style.css";
         head.insertBefore(tu, head.firstChild);
-        /**
-         * JS
-         */
+        //////////// JS
         setTimeout(() => {
           // addThis
           const at = document.createElement('script');
-          at.src = "//s7.addthis.com/js/300/addthis_widget.js%23pubid=ra-53f083b102776710";
+          at.src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53f083b102776710";
           head.insertBefore(at, head.firstChild);
-        }, 3000)
+        }, 3000);
+
+        /**
+         * Слайдер выпоненнных проектов
+         */
+        class Slider {
+          conf = {
+            start: false, // стартовать или нет после загрузки
+            pause_onhover: true, // пауза если курсор на слайдере
+            num: 0, // начать показ с номера слайда
+            speed: 300, // скорость анимации
+            delay: 5000// задержка между сменой слайда
+          }
+
+          /**
+           * @return {boolean}
+           */
+          constructor(el, conf) {
+            if (typeof el === 'undefined') {return false;}
+            this.el = $(el) || {};
+            typeof conf === 'object' ? Object.assign(this.conf, conf) : null;
+            return this.el.each((i, e) => {
+              let self = $(e),
+                  imgs = self.find('img'),// все изображения слайдера
+                  next = self.find('.slider_next'),// кнопка "следующий"
+                  prev = self.find('.slider_prev');// кнопка "предыдущий"
+              this.items = self.find('.slider_item');// набор слайдов
+              this.count = this.items.length;// всего слайдов
+              this.num = this.conf.num;// номер текущего слайда
+              // начать показ с номера слайда
+              this.items.eq(this.num).show();
+              // старт смены слайдов если нужно
+              this.conf.start ? this.start() : null;
+              // пауза если курсор на слайдере
+              this.conf.start && this.conf.pause_onhover
+                ? self.hover(() => {this.pause();}, () => {this.start();})
+                : null;
+              // работа кнопки "следующий"
+              next.on('click.Slider', () => {
+                TUI.GoTo('#projs');
+                this.next();
+              });
+              // работа кнопки "предыдущий"
+              prev.on('click.Slider', () => {
+                TUI.GoTo('#projs');
+                this.prev();
+              });
+              // отображение кнопок управления при прокрутке и отложенная загрузка изображений
+              $(window).on('scroll.Slider', function() {
+                let s_t = $(this).scrollTop(),
+                    o_t = self.offset().top,
+                    w_h = $(this).outerHeight(true);
+                // отложенная загрузка изображений
+                if ((s_t + w_h) >= o_t) {
+                  imgs.each(function(){
+                    let img = $(this);
+                    !img.attr('src') ? img.attr('src', img.data('src')) : null;
+                  });
+                }
+                // отображение кнопок управления
+                (s_t >= o_t) && (s_t <= (o_t + self.outerHeight() - w_h/2))
+                  ? next.add(prev).show()
+                  : next.add(prev).hide();
+              });
+            });
+          }
+
+          start() {
+            this.time = setInterval(() => this.next(), this.conf.delay);
+          }
+
+          pause() {
+              clearInterval(this.time);
+          }
+
+          next() {
+            this.num = this.count - 1 <= this.num ? 0 : this.num + 1;
+            this.items.hide().eq(this.num).fadeIn(this.conf.speed);
+          }
+
+          prev() {
+            this.num = this.num === 0 ? this.count - 1 : this.num - 1;
+            this.items.hide().eq(this.num).fadeIn(this.conf.speed);
+          }
+        }
+        new Slider('#projs');
+
+        /**
+         * Смена монологов
+         */
+        (function() {
+          let i = 0,
+              my = $('#i'),
+              i_say = $('#i_say'),
+              monologs = [
+                `<h1>Что там у вас? 🧐</h1><ul><li>Разработка производительных веб-преложений</li><li>Дизайн веб-ресурсов, разработка логотипов и значков, работа с векторной и растровой графикой</li><li>SEO-оптимизация, микроразметка, оптимизация производительности, вывод в <q>зелёную зону</q> Google PageSpeed, консультация и аудит</li><li>HTML5, CSS3, адаптивная вёрстка веб-страниц и макетов</li><li>Работа с Linux, настройка сервера</li><li>PHP, SQL, JavaScript, CodeIgniter, Git, Composer, Docker...</li></ul>`,
+                `<h1>Никаких сайтов-болванок!</h1><p>Хотите, чтобы ваш сайт был как у других? Не на того попали! Я разработал производительную, легковесную и простую в администрировании CMS, которая заткнёт за пояс WordPress, Joomla, OpenCart и других монстров избыточности 🤟</p>`,
+                `<h1>Никто не любит ждать</h1><p>Сами знаете, как бесят сайты, которые загружаются на смартфоне целую вечность. Разрабатывая веб-преложения, делаю упор на адаптивность и производительность. Если можно ускорить загрузку, она будет ускорена ⚡</p>`,
+                `<h1>Простота и эффективность</h1><p>Дизайн приложения должен быть простым и в то же время эффективным. Такая задача чаще всего оказывается очень непростой 🤔 Не нужно говорить мне как делать, расскажите лучше подробнее о тех, кто этим приложением будет пользоваться и что вы от них ждёте.</p>`,
+                `<h1>Играл со шрифтами и выиграл 🤓</h1><p>Пользуясь случаем, хочу выразить сочувствие коллегам, чей труд и гениальные идеи были погреблены под клиентскими правочками. Серьёзно, иногда хороший дизайн приходится отвоёвывать 🤬</p>`,
+                `<h1><img src="img/monolog/need_coffee.png" alt="🤔 надо кофе попить"></h1>`,
+              ],
+              init = () => {
+                start = setInterval(() => {
+                   i_say.html(monologs[i]);
+                   i = i < monologs.length ? ++i : 0;
+                }, 7000);
+              },
+              pause = () => {
+                clearInterval(start);
+              };
+          i_say.hover(pause, init);
+          my.on('click.say',() => i_say.html(monologs[i++]));
+          init();
+        })();
       })();
-
-      /**
-       * Запуск слайдера выполненных проектов
-       */
-      new Slider('#projs');
-
     </script>
   </body>
 </html>
