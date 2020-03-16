@@ -23,7 +23,7 @@ footer .container{margin:3em auto;padding:0 3%;display:flex;align-items:flex-sta
 .contacts ul,.contacts li{margin:0;padding:0;list-style:none;white-space:nowrap;}
 .contacts li i{margin-right:1em;}
 .contacts img.qr{margin-top:.5em;}
-footer .container .copyright{margin-right:3em;max-width:9em;font-weight:bold;}
+footer .container .copyright{margin-right:3em;font-weight:bold;}
 footer .container .qr{margin-right:1em;max-width:140px;}
 footer .container .contacts{margin:0;padding:0;}
 .go_top_btn{display:none;line-height:1em;font-size:350%;background-color:var(--color-base);text-align:center;cursor:pointer;}
