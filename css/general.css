@@ -4,27 +4,159 @@
  * @author Sergey Nizhnik <kroloburet@gmail.com>
  */
 
-:root{
- --color-font:#000;
- --color-base:#e6c229;
- --color-akcent:#9400d3;
- --color-faint:#f4f2f7;
+/*---------------------------------------------- Variables ---*/
+:root {
+    --color-font: #000;
+    --color-base: #e6c229;
+    --color-akcent: #9400d3;
+    --color-faint: #f4f2f7;
 }
-/*------------------------------------------------------------------------------HTML, BODY, MAIN, FOOTER---*/
-html{height:100%;max-width:2500px;margin:auto;}
-body{height:100%;display:flex;flex-direction:column;}
-main{max-width:1000px;padding:0 3%;margin:auto;}
-footer{background-color:var(--color-faint);border-top:1px solid var(--color-base);margin-top:3em;}
-/*------------------------------------------------------------------------------MENU---*/
-.menu{max-width:1000px;margin:0 auto;}
-/*------------------------------------------------------------------------------BASIC---*/
-.container{margin:3em auto 0 auto;padding:0;}
-footer .container{margin:3em auto;padding:0 3%;display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;}
-.contacts ul,.contacts li{margin:0;padding:0;list-style:none;white-space:nowrap;}
-.contacts li i{margin-right:1em;}
-.contacts img.qr{margin-top:.5em;}
-footer .container .copyright{margin-right:3em;font-weight:bold;}
-footer .container .qr{margin-right:1em;max-width:140px;}
-footer .container .contacts{margin:0;padding:0;}
-.go_top_btn{display:none;line-height:1em;font-size:350%;background-color:var(--color-base);text-align:center;cursor:pointer;}
-@media(max-width:600px){.container h1,.container h2,.container h3,.container h4,.container h5{text-align:center;}.contacts{display:flex;flex-direction:column;align-items:center;}footer .container{flex-direction:column;align-items:center;}footer .container .copyright{margin:0 0 3em 0}footer .container .qr{margin:0 0 1em 0;max-width:100%;}.go_top_btn{display:block;}}
+
+/*---------------------------------------------- Layouts & typographic ---*/
+html {
+    height: 100%;
+    max-width: 2500px;
+    margin: auto;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    max-width: 1000px;
+    padding: 0 3%;
+    margin: auto;
+}
+
+footer {
+    background-color: var(--color-faint);
+    border-top: 1px solid var(--color-base);
+    margin-top: 3em;
+}
+
+.container {
+    margin: 3em auto 0 auto;
+    padding: 0;
+}
+
+img[src='img/noimg.svg'] {
+    max-width: 36px;
+}
+
+.touch {
+    padding: 1em;
+}
+
+.touch:hover {
+    background-color: var(--color-faint);
+}
+
+footer .container {
+    margin: 3em auto;
+    padding: 0 3%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contacts ul, .contacts li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+}
+
+.contacts li i {
+    margin-right: 1em;
+}
+
+.contacts img.qr {
+    margin-top: .5em;
+}
+
+footer .container .copyright {
+    margin-right: 3em;
+    font-weight: bold;
+}
+
+footer .container .qr {
+    margin-right: 1em;
+    max-width: 140px;
+}
+
+footer .container .contacts {
+    margin: 0;
+    padding: 0;
+}
+
+.go_top_btn {
+    display: none;
+    line-height: 1em;
+    font-size: 370%;
+    background-color: var(--color-base);
+    text-align: center;
+    cursor: pointer;
+}
+
+.go_top_btn::after {
+    content: "";
+    display: inline-block;
+    border-right: .1em solid;
+    border-top: .1em solid;
+    transform: rotate(-45deg);
+    padding: .2em;
+}
+
+@media (max-width: 600px) {
+    .container h1, .container h2, .container h3, .container h4, .container h5 {
+        text-align: center;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .container .copyright {
+        margin: 0 0 3em 0
+    }
+
+    footer .container .qr {
+        margin: 0 0 1em 0;
+        max-width: 100%;
+    }
+
+    .go_top_btn {
+        display: block;
+    }
+}
+
+
+/*---------------------------------------------- Menu ---*/
+nav {
+    background-color: var(--color-base);
+    margin-bottom: 3em;
+}
+
+.TUI_Menu {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+@media (max-width: 800px) {
+    .TUI_Menu {
+        background-color: var(--color-base);
+    }
+}
