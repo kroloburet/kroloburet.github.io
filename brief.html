@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Development and design by kroloburet@gmail.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all">
+    <link rel="icon" href="img/myicon.jpg">
+    <meta name="description" content="">
+    <title>Отправить бриф | kroloburet</title>
+
+    <!--
+    ########### Разметка структурированных данных
+    -->
+
+    <!-- google -->
+    <meta itemprop="name" content="Онлайн-логово веб-разработчика Kroloburet">
+    <meta itemprop="description"
+          content="Меня зовут Сергей, я &mdash; веб-разработчик полного цикла. Мой опыт программирования и дизайна берёт начало в 2008 году и продолжается по сей день">
+    <meta itemprop="image" content="https://kroloburet.github.io/img/myicon_share.jpg">
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="Онлайн-логово веб-разработчика Kroloburet">
+    <meta name="twitter:title" content="Привет, Мир! | kroloburet">
+    <meta name="twitter:description"
+          content="Меня зовут Сергей, я &mdash; веб-разработчик полного цикла. Мой опыт программирования и дизайна берёт начало в 2008 году и продолжается по сей день">
+    <meta name="twitter:image:src" content="https://kroloburet.github.io/img/myicon_share.jpg">
+    <meta name="twitter:domain" content="https://kroloburet.github.io">
+    <!-- facebook -->
+    <meta property="og:title" content="Привет, Мир! | kroloburet">
+    <meta property="og:description"
+          content="Меня зовут Сергей, я &mdash; веб-разработчик полного цикла. Мой опыт программирования и дизайна берёт начало в 2008 году и продолжается по сей день">
+    <meta property="og:image" content="https://kroloburet.github.io/img/myicon_share.jpg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="600">
+    <meta property="og:url" content="https://kroloburet.github.io">
+    <meta property="og:site_name" content="Онлайн-логово веб-разработчика Kroloburet">
+    <!-- другие -->
+    <link rel="image_src" href="https://kroloburet.github.io/img/myicon_share.jpg">
+    <!--разметка контактов-->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "email": "mailto:kroloburet@gmail.com",
+            "image": "https://kroloburet.github.io/img/myicon_share.jpg",
+            "jobTitle": "Web development and design",
+            "name": "Kroloburet",
+            "sameAs": "https://kroloburet.github.io"
+        }
+    </script>
+
+    <!--
+    ########### Презагрузка страницы
+    -->
+
+    <style>
+        #pagePreloaderBox {
+            display: block;
+            position: fixed;
+            z-index: 99999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        #pagePreloader {
+            box-sizing: border-box;
+            margin: -50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 7px solid rgba(180, 180, 180, .2);
+            border-left-color: var(--color-base);
+            transform: translateZ(0);
+            animation: preloader 1s infinite linear;
+        }
+
+        #pagePreloader, #pagePreloader::after {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        @keyframes preloader {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+        window.onload = () => document.getElementById('pagePreloaderBox').style.display = 'none';
+    </script>
+
+</head>
+<body id="body">
+
+<div id="pagePreloaderBox">
+    <div id="pagePreloader"></div>
+</div>
+
+<!--
+########### Меню
+-->
+
+<nav>
+    <ul class="TUI_Menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="brief.html">Бриф</a></li>
+        <li><a href="https://jsfiddle.net/user/kroloburet" target="_blank">Наработки</a></li>
+    </ul>
+</nav>
+
+<!--
+########### Main
+-->
+
+<main>
+    <h1>Отправить бриф</h1>
+    <p>Чтобы не тратить время на уточнение типичных вопросов перед началом проектирования веб-приложения, я разработал
+        эту форму. Заполните ее и нажмите <q>Подготовить письмо</q>. В новой вкладке должен запуститься ваш почтовый
+        клиент уже с заполненным письмом. Все, что вам останется сделать &mdash; это отправить его. Я обязательно
+        свяжусь с вами как только получу бриф.</p>
+    <form id="brief">
+
+        <div class="touch">
+            <h2>Обратная связь</h2>
+            <hr>
+            Ваше имя <i class="TUI_red fas fa-question-circle" onmouseover="TUI.Hint(this)"></i>
+            <pre class="TUI_Hint">
+                Как я могу к вам обращаться?
+                <b class="TUI_red">Обязательно для заполнения</b>
+            </pre>
+            <label class="TUI_input">
+                <input type="text" name="name">
+            </label>
+            Ваш телефон или email <i class="TUI_red fas fa-question-circle" onmouseover="TUI.Hint(this)"></i>
+            <pre class="TUI_Hint">
+                Чтобы я мог с вами связаться, оставьте
+                свой email или номер телефона.
+                <b class="TUI_red">Обязательно для заполнения</b>
+            </pre>
+            <label class="TUI_input">
+                <input type="text" name="contact">
+            </label>
+        </div>
+
+        <div class="touch">
+            <h2>О задании</h2>
+            <hr>
+            <label class="TUI_radio inline">
+                <input type="radio" name="app" value="dont_have_app" checked>
+                <span class="custom-radio"></span> У меня нет веб-сайта
+            </label>
+            <label class="TUI_radio inline">
+                <input type="radio" name="app" value="have_app">
+                <span class="custom-radio"></span> У меня есть веб-сайт
+            </label>
+            <div id="dont_have_app">
+                Хостинг и домен <i class="TUI_blue fas fa-question-circle" onmouseover="TUI.Hint(this)"></i>
+                <pre class="TUI_Hint">
+                    <b>Хостинг</b> &mdash; услуга по предоставлению ресурсов для
+                    размещения информации на сервере, постоянно
+                    имеющем доступ к сети Интернет.
+                    <b>Домен (доменное имя)</b> &mdash; это зарегистрированный
+                    адрес (имя) сайта в сети Интернет, состоящее из
+                    набора символов и цифр. Каждое доменное имя в
+                    Интернете является уникальным.
+                </pre>
+                <label class="TUI_select">
+                    <select name="host">
+                        <option value="У меня нет ни хостинга ни домена">У меня нет ни хостинга ни домена</option>
+                        <option value="У меня есть хостинг и домен">У меня есть хостинг и домен</option>
+                        <option value="У меня есть только хостинг">У меня есть только хостинг</option>
+                        <option value="У меня есть только домен">У меня есть только домен</option>
+                    </select>
+                </label>
+                Мне нужно
+                <label class="TUI_select">
+                    <select name="need">
+                        <option value="Разработать веб-сайт">Разработать веб-сайт</option>
+                        <option value="Разработать дизайн">Разработать дизайн</option>
+                        <option value="Разработать лого или значки">Разработать лого или значки</option>
+                        <option value="Опишу задачу в комментарии к брифу">Опишу задачу в комментарии к брифу</option>
+                    </select>
+                </label>
+            </div>
+            <div id="have_app" hidden>
+                Адрес веб-сайта
+                <label class="TUI_input">
+                    <input type="text" name="site_url" placeholder="http://www.example.com">
+                </label>
+                Мне нужно
+                <label class="TUI_select">
+                    <select name="need">
+                        <option value="Разработать новый веб-сайт">Разработать новый веб-сайт</option>
+                        <option value="Разработать новый дизайн">Разработать новый дизайн</option>
+                        <option value="Расширить функционал">Расширить функционал</option>
+                        <option value="Устранить неисправности">Устранить неисправности</option>
+                        <option value="Провести тех-аудит">Провести тех-аудит</option>
+                        <option value="Вёрстка контента">Вёрстка контента</option>
+                        <option value="Администрирование веб-сайта">Администрирование веб-сайта</option>
+                        <option value="Опишу задачу в комментарии к брифу">Опишу задачу в комментарии к брифу</option>
+                    </select>
+                </label>
+            </div>
+            Примеры <i class="TUI_blue fas fa-question-circle" onmouseover="TUI.Hint(this)"></i>
+            <pre class="TUI_Hint">
+                Иногда проще показать на примере,
+                какой дизайн, функционал или
+                что-либо еще вы желаете получить.
+                Перечислите, по одной в строке,
+                ссылки на страницы с примерами.
+            </pre>
+            <label class="TUI_textarea">
+                <textarea name="examples" placeholder="http://www.example.com"></textarea>
+            </label>
+            Комментарий к брифу <i class="TUI_blue fas fa-question-circle" onmouseover="TUI.Hint(this)"></i>
+            <pre class="TUI_Hint">
+                Здесь вы можете вкратце описать
+                задачу или дополнить бриф
+                какими-либо данными и пожеланиями.
+            </pre>
+            <label class="TUI_textarea">
+                <textarea name="comment"></textarea>
+            </label>
+        </div>
+
+        <div class="TUI_fieldset">
+            <a href="mailto:kroloburet@gmail.com?subject=Бриф&body=body" class="TUI_btn-link"
+               onclick="return !window.open(this.href)">Подготовить письмо</a>
+        </div>
+    </form>
+    <script>
+        /**
+         * Бриф
+         */
+        (function () {
+            /**
+             * Элементы формы
+             */
+            let form = document.getElementById('brief'),
+                sections = {
+                    dont_have_app: {
+                        el: document.getElementById('dont_have_app'),
+                        html: document.getElementById('dont_have_app').innerHTML,
+                    },
+                    have_app: {
+                        el: document.getElementById('have_app'),
+                        html: document.getElementById('have_app').innerHTML,
+                    },
+                };
+            /**
+             * События
+             */
+            form.app.forEach(app => {
+                app.addEventListener('change', () => showSection(app.value));
+            });
+
+            /**
+             * Показать секцию формы в зависимости
+             * от значения radio name="app"
+             *
+             * @param id Идентификатор секции
+             * @return void
+             */
+            function showSection(id) {
+                for (let section in sections) {
+                    let el = sections[section].el,
+                        html = sections[section].html;
+                    if (el.id === id) {
+                        el.innerHTML = html;
+                        el.style.display = 'block';
+                    } else {
+                        el.innerHTML = null;
+                        el.style.display = 'none';
+                    }
+                }
+            }
+        })();
+    </script>
+</main>
+
+<!--
+########### Footer
+-->
+
+<footer>
+    <div class="container">
+        <div class="copyright">
+            <img src="img/myicon.jpg" alt="kroloburet">&nbsp;Kroloburet&nbsp;&COPY;
+            <hr>
+            Онлайн-логово<br>веб-разработчика
+        </div>
+        <img src="img/qr.svg" alt="vcard" class="qr" title="Сканируйте чтобы добавить в контакты">
+        <div class="contacts">
+            <ul>
+                <li><i class="fas fa-envelope"></i><a href="mailto:kroloburet@gmail.com" target="_blank">kroloburet@gmail.com</a>
+                </li>
+                <li><i class="fab fa-telegram-plane"></i><a href="https://t.me/kroloburet"
+                                                            target="_blank">@kroloburet</a></li>
+                <li><i class="fab fa-viber"></i><a href="viber://chat?number=+380931178366" target="_blank">написать в
+                    viber</a></li>
+            </ul>
+            <h4>Расскажите обо мне</h4>
+            <div class="addthis_sharing_toolbox"></div>
+        </div>
+    </div>
+</footer>
+<div class="go_top_btn TUI_noprint" onclick="TUI.GoTo('#body')"></div>
+
+<script src="js/general.js"></script>
+<script src="https://rawgit.com/kroloburet/TAGRA_CMS/master/Tagra_UI/script.js"></script>
+</body>
+</html>
