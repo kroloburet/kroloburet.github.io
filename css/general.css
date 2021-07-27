@@ -108,7 +108,7 @@ footer .container .contacts {
     display: inline-block;
     border-right: .1em solid;
     border-top: .1em solid;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translate(-.1em, .1em);
     padding: .2em;
 }
 
@@ -159,4 +159,9 @@ nav {
     .TUI_Menu {
         background-color: var(--color-base);
     }
+}
+
+/*---------------------------------------------- Brief ---*/
+#brief_control, #brief > [class^="TUI_notice"] {
+    margin-top: 1em;
 }
