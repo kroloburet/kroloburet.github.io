@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all">
     <link rel="icon" href="img/myicon.jpg">
-    <meta name="description" content="">
-    <title>Отправить бриф | kroloburet</title>
+    <meta name="description" content="Форма генерации брифа ">
+    <title>Генерировать бриф | Kroloburet</title>
 
     <!--
     ########### Разметка структурированных данных
@@ -22,13 +22,13 @@
     <!-- twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="Онлайн-логово веб-разработчика Kroloburet">
-    <meta name="twitter:title" content="Привет, Мир! | kroloburet">
+    <meta name="twitter:title" content="Привет, Мир! | Kroloburet">
     <meta name="twitter:description"
           content="Меня зовут Сергей, я &mdash; веб-разработчик полного цикла. Мой опыт программирования и дизайна берёт начало в 2008 году и продолжается по сей день">
     <meta name="twitter:image:src" content="https://kroloburet.github.io/img/myicon_share.jpg">
     <meta name="twitter:domain" content="https://kroloburet.github.io">
     <!-- facebook -->
-    <meta property="og:title" content="Привет, Мир! | kroloburet">
+    <meta property="og:title" content="Привет, Мир! | Kroloburet">
     <meta property="og:description"
           content="Меня зовут Сергей, я &mdash; веб-разработчик полного цикла. Мой опыт программирования и дизайна берёт начало в 2008 году и продолжается по сей день">
     <meta property="og:image" content="https://kroloburet.github.io/img/myicon_share.jpg">
@@ -122,11 +122,14 @@
 -->
 
 <main>
-    <h1>Отправить бриф</h1>
-    <p>Чтобы не тратить время на уточнение типичных вопросов перед началом проектирования веб-приложения, я разработал
-        эту форму. Заполните ее и нажмите <q>Подготовить письмо</q>. В новой вкладке должен запуститься ваш почтовый
-        клиент уже с заполненным письмом. Все, что вам останется сделать &mdash; это отправить его. Я обязательно
-        свяжусь с вами как только получу бриф.</p>
+    <h1>Генерировать бриф</h1>
+    <p>Чтобы не тратить время на уточнение типичных вопросов, связанных с заданием, воспользуйтесь этой формой.
+        Заполните ее и нажмите <q>Подготовить письмо</q>. В новой вкладке должен запуститься ваш почтовый
+        клиент уже с заполненным брифом в письме. Всё, что вам останется сделать &mdash; это отправить его. Если же это
+        не сработало, ваш браузер не поддерживает такой функционал. В таком случае отправьте заполненный бриф мне на
+        почту kroloburet@gmail.com или на любой из моих контактов в конце страницы. Для этого нажмите
+        <q>копировать бриф в буфер обмена</q> и вставьте в ваше сообщение для меня. Я обязательно свяжусь с вами,
+        как только получу бриф.</p>
     <form id="brief">
 
         <div class="touch">
@@ -138,7 +141,7 @@
                 <b class="TUI_red">Обязательно для заполнения</b>
             </pre>
             <label class="TUI_input">
-                <input type="text" name="name">
+                <input type="text" name="first_name">
             </label>
             Ваш телефон или email <i class="TUI_red fas fa-question-circle" onmouseover="TUI.Hint(this)"></i>
             <pre class="TUI_Hint">
@@ -155,11 +158,11 @@
             <h2>О задании</h2>
             <hr>
             <label class="TUI_radio inline">
-                <input type="radio" name="app" value="dont_have_app" checked>
+                <input type="radio" name="app" value="У меня нет веб-сайта." data-section="dont_have_app" checked>
                 <span class="custom-radio"></span> У меня нет веб-сайта
             </label>
             <label class="TUI_radio inline">
-                <input type="radio" name="app" value="have_app">
+                <input type="radio" name="app" value="У меня есть веб-сайт." data-section="have_app">
                 <span class="custom-radio"></span> У меня есть веб-сайт
             </label>
             <div id="dont_have_app">
@@ -175,38 +178,43 @@
                 </pre>
                 <label class="TUI_select">
                     <select name="host">
-                        <option value="У меня нет ни хостинга ни домена">У меня нет ни хостинга ни домена</option>
-                        <option value="У меня есть хостинг и домен">У меня есть хостинг и домен</option>
-                        <option value="У меня есть только хостинг">У меня есть только хостинг</option>
-                        <option value="У меня есть только домен">У меня есть только домен</option>
+                        <option value="У меня нет ни хостинга ни домена.">У меня нет ни хостинга ни домена</option>
+                        <option value="У меня есть хостинг и домен.">У меня есть хостинг и домен</option>
+                        <option value="У меня есть только хостинг.">У меня есть только хостинг</option>
+                        <option value="У меня есть только домен.">У меня есть только домен</option>
                     </select>
                 </label>
                 Мне нужно
                 <label class="TUI_select">
                     <select name="need">
-                        <option value="Разработать веб-сайт">Разработать веб-сайт</option>
-                        <option value="Разработать дизайн">Разработать дизайн</option>
-                        <option value="Разработать лого или значки">Разработать лого или значки</option>
-                        <option value="Опишу задачу в комментарии к брифу">Опишу задачу в комментарии к брифу</option>
+                        <option value="Разработать веб-сайт.">Разработать веб-сайт</option>
+                        <option value="Разработать дизайн.">Разработать дизайн</option>
+                        <option value="Разработать лого или значки.">Разработать лого или значки</option>
+                        <option value="Опишу задачу в комментарии к брифу.">Опишу задачу в комментарии к брифу</option>
                     </select>
                 </label>
             </div>
             <div id="have_app" hidden>
-                Адрес веб-сайта
+                Адрес веб-сайта <i class="TUI_blue fas fa-question-circle" onmouseover="TUI.Hint(this)"></i>
+                <pre class="TUI_Hint">
+                    Ссылка на ваш сайт. Если задание касается
+                    нескольких сайтов, перечислите ссылки на них
+                    через запятую.
+                </pre>
                 <label class="TUI_input">
                     <input type="text" name="site_url" placeholder="http://www.example.com">
                 </label>
                 Мне нужно
                 <label class="TUI_select">
                     <select name="need">
-                        <option value="Разработать новый веб-сайт">Разработать новый веб-сайт</option>
-                        <option value="Разработать новый дизайн">Разработать новый дизайн</option>
-                        <option value="Расширить функционал">Расширить функционал</option>
-                        <option value="Устранить неисправности">Устранить неисправности</option>
-                        <option value="Провести тех-аудит">Провести тех-аудит</option>
-                        <option value="Вёрстка контента">Вёрстка контента</option>
-                        <option value="Администрирование веб-сайта">Администрирование веб-сайта</option>
-                        <option value="Опишу задачу в комментарии к брифу">Опишу задачу в комментарии к брифу</option>
+                        <option value="Разработать новый веб-сайт.">Разработать новый веб-сайт</option>
+                        <option value="Разработать новый дизайн.">Разработать новый дизайн</option>
+                        <option value="Расширить функционал.">Расширить функционал</option>
+                        <option value="Устранить неисправности.">Устранить неисправности</option>
+                        <option value="Провести тех-аудит.">Провести тех-аудит</option>
+                        <option value="Вёрстка контента.">Вёрстка контента</option>
+                        <option value="Администрирование веб-сайта.">Администрирование веб-сайта</option>
+                        <option value="Опишу задачу в комментарии к брифу.">Опишу задачу в комментарии к брифу</option>
                     </select>
                 </label>
             </div>
@@ -232,54 +240,125 @@
             </label>
         </div>
 
-        <div class="TUI_fieldset">
-            <a href="mailto:kroloburet@gmail.com?subject=Бриф&body=body" class="TUI_btn-link"
-               onclick="return !window.open(this.href)">Подготовить письмо</a>
+        <div id="brief_control" class="TUI_fieldset">
+            <a href="#" id="brief_mail" class="TUI_btn-link">
+                Подготовить письмо</a>
+            <span>или <a href="#" id="brief_copy">копировать бриф в буфер обмена</a></span>
         </div>
     </form>
     <script>
         /**
          * Бриф
          */
-        (function () {
+        (() => {
+
             /**
              * Элементы формы
              */
-            let form = document.getElementById('brief'),
+            let form = document.getElementById(`brief`),
+                dontHaveApp = form.querySelector(`#dont_have_app`),
+                haveApp = form.querySelector(`#have_app`),
+                control = form.querySelector(`#brief_control`),
+                briefMail = form.querySelector(`#brief_mail`),
+                briefCopy = form.querySelector(`#brief_copy`),
                 sections = {
                     dont_have_app: {
-                        el: document.getElementById('dont_have_app'),
-                        html: document.getElementById('dont_have_app').innerHTML,
+                        el: dontHaveApp,
+                        html: dontHaveApp.innerHTML,
                     },
                     have_app: {
-                        el: document.getElementById('have_app'),
-                        html: document.getElementById('have_app').innerHTML,
+                        el: haveApp,
+                        html: haveApp.innerHTML,
                     },
                 };
+
             /**
              * События
              */
+
+            // События на radio name="app"
             form.app.forEach(app => {
-                app.addEventListener('change', () => showSection(app.value));
+                app.addEventListener(`change`, () => showSection(app.dataset.section));
             });
+
+            // События на кнопке "Подготовить письмо"
+            briefMail.addEventListener(`click`, (e) => {
+                e.preventDefault();
+                if (!validate()) return;
+                return !window.open(`mailto:kroloburet@gmail.com?subject=Бриф&body=${getBrief()}`);
+            });
+
+            // События на ссылке "копировать бриф в буфер обмена"
+            briefCopy.addEventListener(`click`, (e) => {
+                e.preventDefault();
+                if (!validate()) return;
+                navigator.clipboard.writeText(getBrief())
+                    .then(() => msg())
+                    .catch(err => msg(`TUI_notice-r`, `Упс! Не получилось скопировать..( Ошибка: ${err}`));
+            });
+
+            /**
+             * Сообщение о статусе обработки
+             *
+             * @return {void}
+             */
+            const msg = (className = `TUI_notice-g`, text = `Скопировано в буфер`) => {
+                // console.log(getBrief());
+                let msg = document.createElement(`span`);
+                msg.classList.add(className);
+                msg.innerText = text;
+                control.replaceWith(msg);
+                setTimeout(() => msg.replaceWith(control), 3000);
+            }
+
+            /**
+             * Валидация формы
+             *
+             * @return {boolean}
+             */
+            const validate = () => {
+                if (!form.first_name.value || !form.contact.value) {
+                    msg(`TUI_notice-r`, `Пожалуйста, заполните поля обратной связи!`);
+                    return false;
+                }
+                return true;
+            }
+
+            /**
+             * Получить бриф из полей формы
+             *
+             * @return {string}
+             */
+            const getBrief = () => {
+                return `
+Меня зовут: ${form.first_name.value}
+Мои контакты: ${form.contact.value}
+Бриф сформирован: ${new Date().toLocaleString()}
+----------------------------------------------
+${form.app.value} ${form.host?.value ?? ``} ${form.site_url?.value ?? ``}
+Мне нужно: ${form.need.value}
+Примеры: ${form.examples.value}
+Комментарий к заданию: ${form.comment.value}
+`
+            }
 
             /**
              * Показать секцию формы в зависимости
              * от значения radio name="app"
              *
              * @param id Идентификатор секции
-             * @return void
+             * @return {void}
              */
-            function showSection(id) {
+            const showSection = (id) => {
                 for (let section in sections) {
                     let el = sections[section].el,
                         html = sections[section].html;
                     if (el.id === id) {
                         el.innerHTML = html;
-                        el.style.display = 'block';
+                        el.style.display = `block`;
                     } else {
                         el.innerHTML = null;
-                        el.style.display = 'none';
+                        el.style.display = `none`;
                     }
                 }
             }
