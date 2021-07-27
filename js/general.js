@@ -2,7 +2,7 @@
  * @author Sergey Nizhnik <kroloburet@gmail.com>
  */
 
-;(function () {
+(() => {
 
     /**
      * Отложенная загрузка ресурсов
