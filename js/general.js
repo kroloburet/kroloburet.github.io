@@ -7,6 +7,7 @@
     /**
      * Отложенная загрузка ресурсов
      */
+    const head = document.getElementsByTagName('head')[0];
     // addThis
     setTimeout(() => {
         const at = document.createElement('script');
