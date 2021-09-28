@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all">
-    <link rel="icon" href="img/myicon.jpg">
     <meta name="description" content="Форма генерации брифа ">
     <link rel="icon" href="img/myicon.jpg">
     <link rel="stylesheet" href="https://cdn.rawgit.com/kroloburet/TUI/main/TUI.css">
@@ -254,124 +253,6 @@
             <span>или <a href="#" id="brief_copy">копировать бриф в буфер обмена</a></span>
         </div>
     </form>
-    <script>
-        /**
-         * Бриф
-         */
-        (() => {
-
-            /**
-             * Элементы формы
-             */
-            let form = document.getElementById(`brief`),
-                dontHaveApp = form.querySelector(`#dont_have_app`),
-                haveApp = form.querySelector(`#have_app`),
-                control = form.querySelector(`#brief_control`),
-                briefMail = form.querySelector(`#brief_mail`),
-                briefCopy = form.querySelector(`#brief_copy`),
-                sections = {
-                    dont_have_app: {
-                        el: dontHaveApp,
-                        html: dontHaveApp.innerHTML,
-                    },
-                    have_app: {
-                        el: haveApp,
-                        html: haveApp.innerHTML,
-                    },
-                };
-
-            /**
-             * События
-             */
-
-            // События на radio name="app"
-            form.app.forEach(app => {
-                app.addEventListener(`change`, () => showSection(app.dataset.section));
-            });
-
-            // События на кнопке "Подготовить письмо"
-            briefMail.addEventListener(`click`, (e) => {
-                e.preventDefault();
-                if (!validate()) return;
-                return !window.open(`mailto:kroloburet@gmail.com?subject=Бриф&body=${getBrief()}`);
-            });
-
-            // События на ссылке "копировать бриф в буфер обмена"
-            briefCopy.addEventListener(`click`, (e) => {
-                e.preventDefault();
-                if (!validate()) return;
-                navigator.clipboard.writeText(getBrief())
-                    .then(() => msg())
-                    .catch(err => msg(`TUI_notice-r`, `Упс! Не получилось скопировать..( Ошибка: ${err}`));
-            });
-
-            /**
-             * Сообщение о статусе обработки
-             *
-             * @return {void}
-             */
-            const msg = (className = `TUI_notice-g`, text = `Скопировано в буфер`) => {
-                // console.log(getBrief());
-                let msg = document.createElement(`span`);
-                msg.classList.add(className);
-                msg.innerText = text;
-                control.replaceWith(msg);
-                setTimeout(() => msg.replaceWith(control), 3000);
-            }
-
-            /**
-             * Валидация формы
-             *
-             * @return {boolean}
-             */
-            const validate = () => {
-                if (!form.first_name.value || !form.contact.value) {
-                    msg(`TUI_notice-r`, `Пожалуйста, заполните поля обратной связи!`);
-                    return false;
-                }
-                return true;
-            }
-
-            /**
-             * Получить бриф из полей формы
-             *
-             * @return {string}
-             */
-            const getBrief = () => {
-                return `
-Меня зовут: ${form.first_name.value}
-Мои контакты: ${form.contact.value}
-Бриф сформирован: ${new Date().toLocaleString()}
-----------------------------------------------
-${form.app.value} ${form.host?.value ?? ``} ${form.site_url?.value ?? ``}
-Мне нужно: ${form.need.value}
-Примеры: ${form.examples.value}
-Комментарий к заданию: ${form.comment.value}
-`
-            }
-
-            /**
-             * Показать секцию формы в зависимости
-             * от значения radio name="app"
-             *
-             * @param id Идентификатор секции
-             * @return {void}
-             */
-            const showSection = (id) => {
-                for (let section in sections) {
-                    let el = sections[section].el,
-                        html = sections[section].html;
-                    if (el.id === id) {
-                        el.innerHTML = html;
-                        el.style.display = `block`;
-                    } else {
-                        el.innerHTML = null;
-                        el.style.display = `none`;
-                    }
-                }
-            }
-        })();
-    </script>
 </main>
 
 <!--
@@ -402,7 +283,125 @@ ${form.app.value} ${form.host?.value ?? ``} ${form.site_url?.value ?? ``}
 </footer>
 <div class="go_top_btn TUI_noprint" onclick="TUI.GoTo('#body')"></div>
 
+<script>
+    /**
+     * Бриф
+     */
+    (() => {
+
+        /**
+         * Элементы формы
+         */
+        let form = document.getElementById(`brief`),
+            dontHaveApp = form.querySelector(`#dont_have_app`),
+            haveApp = form.querySelector(`#have_app`),
+            control = form.querySelector(`#brief_control`),
+            briefMail = form.querySelector(`#brief_mail`),
+            briefCopy = form.querySelector(`#brief_copy`),
+            sections = {
+                dont_have_app: {
+                    el: dontHaveApp,
+                    html: dontHaveApp.innerHTML,
+                },
+                have_app: {
+                    el: haveApp,
+                    html: haveApp.innerHTML,
+                },
+            };
+
+        /**
+         * События
+         */
+
+        // События на radio name="app"
+        form.app.forEach(app => {
+            app.addEventListener(`change`, () => showSection(app.dataset.section));
+        });
+
+        // События на кнопке "Подготовить письмо"
+        briefMail.addEventListener(`click`, (e) => {
+            e.preventDefault();
+            if (!validate()) return;
+            return !window.open(`mailto:kroloburet@gmail.com?subject=Бриф&body=${getBrief()}`);
+        });
+
+        // События на ссылке "копировать бриф в буфер обмена"
+        briefCopy.addEventListener(`click`, (e) => {
+            e.preventDefault();
+            if (!validate()) return;
+            navigator.clipboard.writeText(getBrief())
+                .then(() => msg())
+                .catch(err => msg(`TUI_notice-error`, `Упс! Не получилось скопировать..( Ошибка: ${err}`));
+        });
+
+        /**
+         * Сообщение о статусе обработки
+         *
+         * @return {void}
+         */
+        const msg = (className = `TUI_notice-success`, text = `Скопировано в буфер`) => {
+            // console.log(getBrief());
+            let msg = document.createElement(`span`);
+            msg.classList.add(className);
+            msg.innerText = text;
+            control.replaceWith(msg);
+            setTimeout(() => msg.replaceWith(control), 3000);
+        }
+
+        /**
+         * Валидация формы
+         *
+         * @return {boolean}
+         */
+        const validate = () => {
+            if (!form.first_name.value || !form.contact.value) {
+                msg(`TUI_notice-error`, `Пожалуйста, заполните поля обратной связи!`);
+                return false;
+            }
+            return true;
+        }
+
+        /**
+         * Получить бриф из полей формы
+         *
+         * @return {string}
+         */
+        const getBrief = () => {
+            return `
+Меня зовут: ${form.first_name.value}
+Мои контакты: ${form.contact.value}
+Бриф сформирован: ${new Date().toLocaleString()}
+----------------------------------------------
+${form.app.value} ${form.host?.value ?? ``} ${form.site_url?.value ?? ``}
+Мне нужно: ${form.need.value}
+Примеры: ${form.examples.value}
+Комментарий к заданию: ${form.comment.value}
+`
+        }
+
+        /**
+         * Показать секцию формы в зависимости
+         * от значения radio name="app"
+         *
+         * @param id Идентификатор секции
+         * @return {void}
+         */
+        const showSection = (id) => {
+            for (let section in sections) {
+                let el = sections[section].el,
+                    html = sections[section].html;
+                if (el.id === id) {
+                    el.innerHTML = html;
+                    el.style.display = `block`;
+                } else {
+                    el.innerHTML = null;
+                    el.style.display = `none`;
+                }
+            }
+        }
+    })();
+</script>
 <script src="js/general.js"></script>
-<script src="https://rawgit.com/kroloburet/TAGRA_CMS/master/Tagra_UI/script.js"></script>
+<script src="https://cdn.rawgit.com/kroloburet/TUI/main/TUI.js"></script>
 </body>
 </html>
