@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all">
-    <link rel="icon" href="img/myicon.jpg">
     <meta name="description"
           content="Меня зовут Сергей, я &mdash; веб-разработчик полного цикла. Мой опыт программирования и дизайна берёт начало в 2008 году и продолжается по сей день">
     <link rel="icon" href="img/myicon.jpg">
@@ -435,7 +434,7 @@
                    onclick="TUI.Toggle('dev_info');return false"
                    title="Показать/скрыть подробности">Еще...</a>
                 <div id="dev_info" hidden>
-                    <p>Использую PHP-фреймворки: Codeigniter, Symfony, Laravel для разработки веб приложений разной
+                    <p>Использую PHP-фреймворки: Codeigniter, Laravel для разработки веб приложений разной
                         сложности. В работе придерживаюсь стандартов и принципов: PSR-1, PSR-2, KISS, DRY, YAGNI, SOLID.
                         Популярные CMS (Joomla, Wordpress), PhpBB также не <q>прошли</q> мимо меня. Всё же предпочитаю
                         использовать современные PHP-фреймворки для достижения большей оптимизации и масштабируемости
@@ -477,7 +476,7 @@
                 Работа с Linux, настройка сервера, cron, ssh, shell и bash-скрипты
             </li>
             <li>
-                Использую: PHP, SQL, Regex, JavaScript ES6, Vue.js, jQuery, JSON, AJAX, CodeIgniter, Symfony, Laravel,
+                Использую: PHP, SQL, Regex, JavaScript ES6, Vue.js, jQuery, JSON, AJAX, CodeIgniter, Laravel,
                 OOP, API, Git, Composer, Docker, Apache, Nginx, MySQL, MariaDB, phpMyAdmin, стандарты и принципы PSR-1,
                 PSR-2, KISS, DRY, YAGNI, SOLID, design patterns.
                 <a href="#"
@@ -886,122 +885,6 @@
     })();
 </script>
 <script src="js/general.js"></script>
-<script src="https://rawgit.com/kroloburet/TAGRA_CMS/master/Tagra_UI/script.js"></script>
+<script src="https://cdn.rawgit.com/kroloburet/TUI/main/TUI.js"></script>
 </body>
-<script>
-    (() => {
-
-        /**
-         * Слайдер выполненных проектов
-         */
-        class Slider {
-            defConf = {
-                start: false, // Стартовать или нет после загрузки
-                pauseOnhover: true, // Пауза если курсор на слайдере
-                num: 0, // Начать показ с номера слайда
-                delay: 5000// Задержка между сменой слайда
-            }
-
-            /**
-             * Инициализация слайдера
-             *
-             * @param {string} selector CSS селектор слайдера
-             * @param {object} userConf Пользовательская конфигурация
-             * @return {HTMLAllCollection}
-             */
-            constructor(selector, userConf = {}) {
-                const collection = document.querySelectorAll(selector);
-                this.conf = Object.assign(this.defConf, userConf);
-                collection.forEach(slider => {
-                    const imgs = slider.querySelectorAll('img');// Все изображения слайдера
-                    const next = slider.querySelector('.slider_next');// Кнопка "следующий"
-                    const prev = slider.querySelector('.slider_prev');// Кнопка "предыдущий"
-                    this.items = slider.querySelectorAll('.slider_item');// Набор слайдов
-                    this.count = this.items.length;// Всего слайдов
-                    this.num = this.conf.num;// Номер текущего слайда
-                    // Начать показ с номера слайда
-                    this.items[this.num].style.display = 'block';
-                    // Старт смены слайдов если нужно
-                    this.conf.start ? this.start() : null;
-                    // Пауза если курсор на слайдере
-                    if (this.conf.start && this.conf.pauseOnhover) {
-                        slider.onmouseover = () => this.pause();
-                        slider.onmouseout = () => this.start();
-                    }
-                    // Работа кнопки "следующий"
-                    next.onclick = () => this.next();
-                    // Работа кнопки "предыдущий"
-                    prev.onclick = () => this.prev();
-                    // Отображение кнопок управления при прокрутке и отложенная загрузка изображений
-                    window.addEventListener('scroll', () => {
-                        let sT = slider.getBoundingClientRect().top;// Расстояние до верха
-                        let sB = slider.getBoundingClientRect().bottom;// Расстояние до низа
-                        let cH = document.documentElement.clientHeight;// Высота окна
-                        // Отложенная загрузка изображений
-                        if ((sT - cH) < 0) {
-                            imgs.forEach(img => {
-                                !img.hasAttribute('src') ? img.src = img.dataset.src : null;
-                            });
-                        }
-                        // Отображение кнопок управления
-                        [prev, next].forEach(btn =>
-                            btn.style.display = (sT < 0) && ((cH / 2) < sB) ? 'block' : 'none'
-                        );
-                    });
-                });
-                return collection;
-            }
-
-            start() {
-                this.time = setInterval(() => this.next(), this.conf.delay);
-            }
-
-            pause() {
-                clearInterval(this.time);
-            }
-
-            next() {
-                this.num = this.count - 1 <= this.num ? 0 : this.num + 1;
-                [...this.items].forEach(item => item.style.display = 'none');
-                this.items[this.num].style.display = 'block';
-            }
-
-            prev() {
-                this.num = this.num === 0 ? this.count - 1 : this.num - 1;
-                [...this.items].forEach(item => item.style.display = 'none');
-                this.items[this.num].style.display = 'block';
-            }
-        }
-
-        new Slider('#projs');
-
-        /**
-         * Смена монологов
-         */
-        (() => {
-            let i = 0,
-                start = null,
-                delay = 7000,
-                my = document.getElementById('i'),
-                i_say = document.getElementById('i_say'),
-                monologues = [
-                    `<h1>Что там у вас? 🧐</h1><ul><li>Разработка производительных веб-приложений</li><li>Дизайн веб-ресурсов, разработка логотипов и значков, работа с векторной и растровой графикой</li><li>SEO-оптимизация, микроразметка, оптимизация производительности, вывод в <q>зелёную зону</q> Google PageSpeed, консультация и аудит</li><li>HTML5, CSS3, адаптивная вёрстка веб-страниц и макетов</li><li>Работа с Linux, настройка сервера</li><li>PHP, SQL, JavaScript, CodeIgniter, Symfony, Laravel, Git, Composer, Docker...</li></ul>`,
-                    `<h1>Никто не любит ждать</h1><p>Сами знаете, как бесят сайты, которые загружаются на смартфоне целую вечность. Разрабатывая веб-приложения, делаю упор на адаптивность и производительность. Если можно ускорить загрузку, она будет ускорена ⚡</p>`,
-                    `<h1>Простота и эффективность</h1><p>Дизайн приложения должен быть простым и в то же время эффективным. Такая задача чаще всего оказывается очень непростой 🤔 Не нужно говорить мне как делать, расскажите лучше подробнее о тех, кто этим приложением будет пользоваться и что вы от них ждёте.</p>`,
-                    `<h1>Играл со шрифтами и выиграл 🤓</h1><p>Пользуясь случаем, хочу выразить сочувствие коллегам, чей труд и гениальные идеи были погребены под клиентскими правочками. Серьёзно, иногда хороший дизайн приходится отвоёвывать 🤬</p>`,
-                    `<h1><img src="img/monolog/need_coffee.png" alt="🤔 надо кофе попить"></h1>`,
-                ],
-                step = () => i = i < monologues.length - 1 ? ++i : 0,
-                init = () =>
-                    start = setInterval(() => {
-                        i_say.innerHTML = monologues[i];
-                        step();
-                    }, delay);
-            i_say.onmouseover = () => clearInterval(start);
-            i_say.onmouseout = init;
-            my.onclick = () => i_say.innerHTML = monologues[step()];
-            init();
-        })();
-    })();
-</script>
 </html>
